@@ -14,7 +14,7 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected -d "cd $selected && nvim" \; split-window -d -p 20 -c "#{pane_current_path}" \; attach
+    tmux new-session -s $selected_name -c $selected -d "nvim" \; split-window -d -p 20 -c "#{pane_current_path}" \; attach
     exit 0
 fi
 
