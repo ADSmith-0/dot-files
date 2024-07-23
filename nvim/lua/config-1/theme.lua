@@ -1,8 +1,14 @@
-require("onedarkpro").setup()
-vim.cmd.colorscheme("onedark")
---require("tokyonight").setup({
-  --style = "moon",
-  --terminal_colors = true,
---})
---require("tokyonight").load()
---vim.cmd.colorscheme("tokyonight")
+-- onedark
+require('onedark').setup {
+  style = 'darker'
+}
+require('onedark').load()
+
+-- sonokai
+-- vim.cmd.colorscheme("sonokai")
+
+-- ayu
+-- require("ayu").setup({
+--   mirage = true
+-- })
+-- require("ayu").colorscheme()

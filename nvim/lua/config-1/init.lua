@@ -19,7 +19,9 @@ local plugins = {
     build = ":TSUpdate",
   },
   {
-    "olimorris/onedarkpro.nvim",
+    "navarasu/onedark.nvim",
+    "Shatur/neovim-ayu",
+    "sainnhe/sonokai",
   },
   {
     "nvim-lualine/lualine.nvim",
@@ -34,7 +36,7 @@ local plugins = {
   },
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
-  { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
+  { "VonHeikemen/lsp-zero.nvim",                branch = "v3.x" },
   { "neovim/nvim-lspconfig" },
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/nvim-cmp" },
@@ -144,7 +146,7 @@ local plugins = {
       })
     end,
   },
-  { "echasnovski/mini.pairs", version = "*" },
+  { "echasnovski/mini.pairs",  version = "*" },
   {
     'rmagatti/auto-session',
     config = function()
@@ -189,7 +191,7 @@ local plugins = {
   --     { "[[", desc = "Prev Reference" },
   --   },
   -- },
-  { "tpope/vim-repeat",       event = "VeryLazy" },
+  { "tpope/vim-repeat", event = "VeryLazy" },
   {
     "ggandor/leap.nvim",
     enabled = true,

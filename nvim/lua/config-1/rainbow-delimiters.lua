@@ -1,11 +1,8 @@
 local rainbow_delimiters = require 'rainbow-delimiters'
 
-local color = require("onedarkpro.helpers")
-local colors = color.get_colors()
-
-vim.cmd('highlight RainbowDelimiterViolet guifg=' .. colors.purple)
-vim.cmd('highlight RainbowDelimiterBlue guifg=' .. colors.blue)
-vim.cmd('highlight RainbowDelimiterYellow guifg=' .. colors.yellow)
+vim.cmd('highlight RainbowDelimiterViolet guifg=#d55dfe')
+vim.cmd('highlight RainbowDelimiterBlue guifg=#61afef')
+vim.cmd('highlight RainbowDelimiterYellow guifg=#e5c07b')
 
 vim.g.rainbow_delimiters = {
   strategy = {
