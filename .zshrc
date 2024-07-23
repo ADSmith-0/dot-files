@@ -101,7 +101,7 @@ ZSH_THEME="philips"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm nvm zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git node npm nvm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,8 +139,6 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-eval "nvm use 20.9.0"
 
 alias "ts"="tmux-sessionizer"
 
