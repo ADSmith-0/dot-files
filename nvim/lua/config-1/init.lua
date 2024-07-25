@@ -19,6 +19,7 @@ local plugins = {
     build = ":TSUpdate",
   },
   {
+    "olimorris/onedarkpro.nvim",
     "navarasu/onedark.nvim",
     "Shatur/neovim-ayu",
     "sainnhe/sonokai",

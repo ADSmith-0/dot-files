@@ -1,8 +1,11 @@
 -- onedark
-require('onedark').setup {
-  style = 'darker'
-}
-require('onedark').load()
+-- require('onedark').setup {
+--   style = 'darker'
+-- }
+-- require('onedark').load()
+
+-- ondarkpro
+vim.cmd.colorscheme("onedark_vivid")
 
 -- sonokai
 -- vim.cmd.colorscheme("sonokai")
