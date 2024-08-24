@@ -141,6 +141,10 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/go/bin
 
+# fzf keybinds
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+
 alias "ts"="tmux-sessionizer"
 
 bindkey '^I'   complete-word       # tab          | complete
