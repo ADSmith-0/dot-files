@@ -139,6 +139,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/usr/local/go/bin
 
 alias "ts"="tmux-sessionizer"
 
