@@ -101,7 +101,7 @@ ZSH_THEME="philips"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm nvm zsh-autosuggestions)
+plugins=(node npm nvm zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -146,6 +146,9 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
 alias "ts"="tmux-sessionizer"
+alias "gss"="git status -s"
+alias "gds"="git diff --staged"
+alias "gda"="git diff ."
 
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
