@@ -145,6 +145,8 @@ export PATH=$PATH:/usr/local/go/bin
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
+
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
 alias "gds"="git diff --staged"
