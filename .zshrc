@@ -147,6 +147,10 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
 
+export FZF_DEFAULT_COMMAND="fdfind --type file --follow --hidden --exclude .git --color=always"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS="--ansi"
+
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
 alias "gds"="git diff --staged"
