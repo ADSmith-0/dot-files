@@ -1,6 +1,6 @@
 #!/bin/bash
 # Telescope
-sudo apt install fzf ripgrep make cmake
+sudo apt install fzf ripgrep make
 
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
