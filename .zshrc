@@ -152,4 +152,4 @@ alias "gda"="git diff ."
 
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
-bindkey '^f' forward-word
+bindkey '^f' forward-word # shift + f | complete next word
