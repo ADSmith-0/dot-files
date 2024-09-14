@@ -1,0 +1,7 @@
+[user]
+	name = ADSmith-0
+	email = change me
+[push]
+	autoSetupRemote = true
+[core]
+	editor = vim
