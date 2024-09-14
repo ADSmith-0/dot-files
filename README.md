@@ -15,6 +15,7 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 - [fzf](https://github.com/junegunn/fzf) (telescope)
 - [fd](https://github.com/sharkdp/fd) (telescope)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (telescope)
+- make (for telescope)
 - npm, nodejs (required for downloading certain language servers)
 - nvm (helps keep npm up-to-date)
 
@@ -22,4 +23,5 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 - [tpm](https://github.com/tmux-plugins/tpm)
 
 ## Other stuff to remember
+- [Setup git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Remember to change the email in the `.gitconfig`
