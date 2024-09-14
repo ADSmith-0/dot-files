@@ -12,6 +12,7 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (oh my zsh plugin)
 
 ### Nvim
+- [nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md) - remember to get the unstable release
 - [fzf](https://github.com/junegunn/fzf) (telescope)
 - [fd](https://github.com/sharkdp/fd) (telescope)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (telescope)
@@ -20,6 +21,7 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 - nvm (helps keep npm up-to-date)
 
 ### Tmux
+- [tmux](https://github.com/tmux/tmux/wiki/Installing)
 - [tpm](https://github.com/tmux-plugins/tpm)
 
 ## Other stuff to remember
