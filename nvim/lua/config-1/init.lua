@@ -2,18 +2,12 @@ require("config-1.remap")
 require("config-1.set")
 require("config-1.lazy")
 local plugins = {
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.4",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
-    },
+    tag = "0.1.8",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release" },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -55,9 +49,7 @@ local plugins = {
     end
   }, -- Required
   { "saadparwaiz1/cmp_luasnip" },
-  {
-    "HiPhish/rainbow-delimiters.nvim",
-  },
+  { "HiPhish/rainbow-delimiters.nvim" },
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
@@ -231,3 +223,4 @@ require("config-1.autocmd")
 require("config-1.mini-pairs")
 require("config-1.leap")
 require("config-1.todo-comments")
+require("config-1.telescope")
