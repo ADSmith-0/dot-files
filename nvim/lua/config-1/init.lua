@@ -88,9 +88,7 @@ local plugins = {
     },
     version = "^1.0.0", -- optional: only update when a new 1.x version is released
   },
-  {
-    "christoomey/vim-tmux-navigator"
-  },
+  { "christoomey/vim-tmux-navigator" },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
@@ -103,13 +101,6 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
-  },
-  {
-    "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
   },
   {
     "echasnovski/mini.indentscope",
