@@ -40,3 +40,6 @@ white = "#abb2bf"
 [font]
 normal = { family = "CaskaydiaCoveNerdFontMono", style = "Regular" }
 size = 14
+
+[window]
+padding = { x = 8, y = 8 }
