@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/dev ~/dot-files -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(fdfind . ~/Dev ~/dot-files --full-path -d 1 -t d | fzf)
 fi
 
 if [[ -z $selected ]]; then
