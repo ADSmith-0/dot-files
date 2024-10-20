@@ -1,4 +1,4 @@
-PROMPT='%{$fg[cyan]%}%B%c%{$reset_color%} $(git_prompt_info)%(?:%{$fg_bold[green]%}%1{$%}:%{$fg_bold[red]%}%1{$%})%{$reset_color%} '
+PROMPT='%{$fg[cyan]%}%B%(4~|../%3~|%~)%{$reset_color%} $(git_prompt_info)%(?:%{$fg_bold[green]%}%1{$%}:%{$fg_bold[red]%}%1{$%})%{$reset_color%} '
 RPROMPT='[%*]'
 
 # user %{$fg[blue]%}%B%n%b%{$reset_color%}
