@@ -38,7 +38,7 @@ cyan = "#2bbac5"
 white = "#abb2bf"
 
 [font]
-normal = { family = "CaskaydiaCoveNerdFontMono", style = "Regular" }
+normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
 size = 14
 
 [window]
