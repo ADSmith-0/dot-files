@@ -27,3 +27,4 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 ## Other stuff to remember
 - [Setup git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 - Remember to change the email in the `.gitconfig`
+- Open tmux and run: `prefix + I` to install dependencies
