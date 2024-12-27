@@ -29,3 +29,8 @@ ls.add_snippets("typescriptreact", {
     fmt("export const {} = () => {{\n\treturn (\n\t\t<div>{}</div>\n\t);\n}};",
       { dl(1, l.TM_FILENAME:gsub(".tsx", "")), rep(1) }))
 })
+
+ls.add_snippets("go", {
+  s("enn", fmt("if err != nil {{\n\t{}\n}}", { i(0) })),
+  s("aer", fmt("{}, err := {}\nif err != nil {{\n\tlog.Fatal(\"{}\", err)\n}}", { i(1), i(2), i(0) }))
+})
