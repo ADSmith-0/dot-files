@@ -159,6 +159,7 @@ bindkey '^f' forward-word # shift + f | complete next word
 # aliases
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
+alias "gs"="gss"
 alias "gds"="git diff --staged"
 alias "gda"="git diff ."
 alias "ga"="git_add.sh"
