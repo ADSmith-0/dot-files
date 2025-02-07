@@ -156,6 +156,14 @@ bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^f' forward-word # shift + f | complete next word
 
+# pnpm
+export PNPM_HOME="/home/adam/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # aliases
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
@@ -163,5 +171,6 @@ alias "gs"="gss"
 alias "gds"="git diff --staged"
 alias "gda"="git diff ."
 alias "ga"="git_add.sh"
+alias "pn"="pnpm"
 # aliases end
 
