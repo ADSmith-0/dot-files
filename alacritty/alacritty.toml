@@ -42,7 +42,7 @@ normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
 size = 14
 
 [window]
-padding = { x = 8, y = 8 }
+padding = { x = 16, y = 16 }
 
 [env]
 TERM = "xterm-256color"
