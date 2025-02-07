@@ -152,10 +152,13 @@ export FZF_DEFAULT_COMMAND="fdfind --type file --follow --hidden --exclude .git 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--ansi"
 
+# aliases
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
 alias "gds"="git diff --staged"
 alias "gda"="git diff ."
+alias "ga"="git_add.sh"
+# aliases end
 
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
