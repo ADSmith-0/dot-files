@@ -6,8 +6,12 @@ background = "#282c34"
 foreground = "#abb2bf"
 
 [colors.cursor]
-text = "#282a36"
-cursor = "#f8f8f2"
+text = "CellBackground"
+cursor = "CellForeground"
+
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "CellForeground"
 
 #[colors.vi_mode_cursor]
 #text = "CellBackground"
