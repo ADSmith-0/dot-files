@@ -6,5 +6,8 @@ require("nvim-tree").setup({
   view = {
     side = "right",
     width = 45
+  },
+  filters = {
+    git_ignored = false
   }
 })
