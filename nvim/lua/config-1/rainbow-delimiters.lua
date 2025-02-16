@@ -24,5 +24,5 @@ vim.g.rainbow_delimiters = {
     'RainbowDelimiterBlue',
     'RainbowDelimiterYellow',
   },
-  blacklist = { 'html', 'jsx', 'svelte', 'tsx', 'svg' }
+  blacklist = { 'html', 'jsx', 'svelte', 'tsx', 'svg', 'astro' }
 }
