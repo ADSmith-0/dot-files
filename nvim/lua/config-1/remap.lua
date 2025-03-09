@@ -31,8 +31,9 @@ vim.keymap.set("v", "<leader>{", "\"gc{}<Esc><Left>\"gp")
 vim.keymap.set("v", "<leader>(", "\"gc()<Esc><Left>\"gp")
 vim.keymap.set("v", "<leader>[", "\"gc[]<Esc><Left>\"gp")
 
--- LazyGit
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
+-- Add new line without exiting normal mode
+vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
+vim.keymap.set("n", "<leader><Enter>", "o<Esc>")
 
 -- Tmux sessionzier
 vim.keymap.set("n", "<leader>F", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
