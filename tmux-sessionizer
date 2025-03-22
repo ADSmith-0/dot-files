@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(fdfind . ~/Dev ~/dot-files --full-path -d 1 -t d | fzf)
+    selected=$({ fdfind . ~/Dev --full-path -E testing -d 1 -t d ; fdfind . ~/Dev/testing --full-path -d 1 -t d ; echo ~/dot-files ; } | fzf)
 fi
 
 if [[ -z $selected ]]; then
