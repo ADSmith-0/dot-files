@@ -42,8 +42,8 @@ cyan = "#2bbac5"
 white = "#abb2bf"
 
 [font]
-normal = { family = "CaskaydiaMono Nerd Font", style = "Regular" }
-size = 14
+normal = { family = "JetBrainsMono Nerd Font", style = "Medium" }
+size = 13.5
 
 [window]
 padding = { x = 16, y = 16 }
