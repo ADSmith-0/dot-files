@@ -168,9 +168,13 @@ esac
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
 alias "gs"="gss"
+alias "gd"="git diff"
 alias "gds"="git diff --staged"
 alias "gda"="git diff ."
 alias "ga"="git_add.sh"
+alias "glo"="git log --oneline"
+alias "gg"="git log --oneline --graph"
+alias "gh"="git log -p"
 alias "pn"="pnpm"
 # aliases end
 
