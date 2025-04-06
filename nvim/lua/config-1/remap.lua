@@ -31,6 +31,9 @@ vim.keymap.set("v", "<leader>{", "\"gc{}<Esc><Left>\"gp")
 vim.keymap.set("v", "<leader>(", "\"gc()<Esc><Left>\"gp")
 vim.keymap.set("v", "<leader>[", "\"gc[]<Esc><Left>\"gp")
 
+-- Go to last entered buffer
+vim.keymap.set("n", "<A-l>", "<cmd>:b#<CR>", { desc = "Go to last entered buffer" })
+
 -- Add new line without exiting normal mode
 vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
 vim.keymap.set("n", "<leader><Enter>", "o<Esc>")
