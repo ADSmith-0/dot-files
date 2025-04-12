@@ -16,7 +16,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Copy to clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>y", "\"+yy")
 vim.keymap.set("v", "<leader>y", "\"+y")
 
 -- Paste from clipboard
@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("v", "<leader>p", "\"+p")
 
 -- Delete without copying to clipboard
-vim.keymap.set("n", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", "\"_dd")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
