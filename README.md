@@ -13,7 +13,7 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 
 ### Nvim
 - [nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md) - remember to get the unstable release
-- [fzf](https://github.com/junegunn/fzf) (telescope)
+- [fzf](https://github.com/junegunn/fzf) (telescope) - Install MANUALLY, most linux distros are very far behind on the version
 - [fd](https://github.com/sharkdp/fd) (fzf & telescope)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (telescope)
 - make (for telescope)
