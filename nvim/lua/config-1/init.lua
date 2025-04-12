@@ -73,20 +73,11 @@ local plugins = {
       "nvim-tree/nvim-web-devicons",
     },
   },
+  { "lewis6991/gitsigns.nvim" },
   {
-    "romgrk/barbar.nvim",
-    dependencies = {
-      "lewis6991/gitsigns.nvim",     -- OPTIONAL: for git status
-      "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-    },
-    init = function() vim.g.barbar_auto_setup = false end,
-    opts = {
-      -- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-      -- animation = true,
-      -- insert_at_start = true,
-      -- …etc.
-    },
-    version = "^1.0.0", -- optional: only update when a new 1.x version is released
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons'
   },
   { "christoomey/vim-tmux-navigator" },
   {
@@ -220,7 +211,7 @@ require("config-1.lsp-zero")
 require("config-1.luasnip")
 require("config-1.lualine")
 require("config-1.comment")
-require("config-1.barbar")
+require("config-1.bufferline")
 require("config-1.colorizer")
 require("config-1.rainbow-delimiters")
 require("config-1.indent-blankline")

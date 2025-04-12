@@ -30,7 +30,10 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- Remap Ctrl+C to Esc as they are similar but not the exact same
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- Go to last entered buffer
+-- Buffer navigation
+vim.keymap.set("n", "<Tab>", "<cmd>:bn<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>:bp<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<A-x>", "<cmd>:bd<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "<A-l>", "<cmd>:b#<CR>", { desc = "Go to last entered buffer" })
 
 -- Add new line without exiting normal mode
