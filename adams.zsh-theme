@@ -1,4 +1,5 @@
-PROMPT="%{$fg[cyan]%}%B%(3~|../%2~|%~)%{$reset_color%} "
+PROMPT="
+ %{$fg[cyan]%}%B%(3~|../%2~|%~)%{$reset_color%} "
 PROMPT+='$(git_prompt_info)%{$fg_bold[yellow]%}$(git_commits_ahead)$(git_prompt_ahead)$(git_commits_behind)$(git_prompt_behind)%{$reset_color%}'
 PROMPT+="%(?:%{$fg_bold[green]%}%1{$%}:%{$fg_bold[red]%}%1{$%})%{$reset_color%} "
 RPROMPT='[%*]'
