@@ -27,6 +27,7 @@ vim.keymap.set("v", "<leader>p", "\"+p")
 vim.keymap.set("n", "<leader>d", "\"_dd")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
+-- Remap Ctrl+C to Esc as they are similar but not the exact same
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Toggle quotes in visual mode
