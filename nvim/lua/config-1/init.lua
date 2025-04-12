@@ -130,7 +130,20 @@ local plugins = {
       })
     end,
   },
-  { "echasnovski/mini.pairs",  version = "*" },
+  {
+    "echasnovski/mini.pairs",
+    version = "*"
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  },
   {
     'rmagatti/auto-session',
     config = function()
@@ -175,7 +188,10 @@ local plugins = {
   --     { "[[", desc = "Prev Reference" },
   --   },
   -- },
-  { "tpope/vim-repeat", event = "VeryLazy" },
+  {
+    "tpope/vim-repeat",
+    event = "VeryLazy"
+  },
   {
     "ggandor/leap.nvim",
     enabled = true,

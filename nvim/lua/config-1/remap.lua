@@ -30,12 +30,6 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- Remap Ctrl+C to Esc as they are similar but not the exact same
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
--- Toggle quotes in visual mode
-vim.keymap.set("v", "<leader>\"", "\"gc\"\"<Esc><Left>\"gp")
-vim.keymap.set("v", "<leader>{", "\"gc{}<Esc><Left>\"gp")
-vim.keymap.set("v", "<leader>(", "\"gc()<Esc><Left>\"gp")
-vim.keymap.set("v", "<leader>[", "\"gc[]<Esc><Left>\"gp")
-
 -- Go to last entered buffer
 vim.keymap.set("n", "<A-l>", "<cmd>:b#<CR>", { desc = "Go to last entered buffer" })
 
