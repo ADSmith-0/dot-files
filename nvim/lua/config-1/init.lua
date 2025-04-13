@@ -1,3 +1,7 @@
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 require("config-1.remap")
 require("config-1.set")
 require("config-1.lazy")
@@ -64,6 +68,23 @@ local plugins = {
     "lukas-reineke/indent-blankline.nvim",
     event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     main = "ibl",
+  },
+  {
+    "mikavilpas/yazi.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      -- check the installation instructions at
+      -- https://github.com/folke/snacks.nvim
+      "folke/snacks.nvim"
+    },
+    keys = {
+      {
+        "<leader>e",
+        mode = { "n", "v" },
+        "<cmd>Yazi<cr>",
+        desc = "Open yazi at the current file",
+      },
+    },
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -206,7 +227,6 @@ local plugins = {
 }
 require("lazy").setup(plugins)
 require("config-1.theme")
-require("config-1.nvim-tree")
 require("config-1.lsp-zero")
 require("config-1.luasnip")
 require("config-1.lualine")
