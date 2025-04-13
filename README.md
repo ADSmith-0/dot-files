@@ -16,6 +16,7 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 - [fzf](https://github.com/junegunn/fzf) (telescope) - Install MANUALLY, most linux distros are very far behind on the version
 - [fd](https://github.com/sharkdp/fd) (fzf & telescope)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (telescope)
+- [yazi](https://yazi-rs.github.io/docs/installation#source) - For file exploring in Nvim
 - make (for telescope)
 - npm, nodejs (required for downloading certain language servers)
 - nvm (helps keep npm up-to-date)
