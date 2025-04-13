@@ -39,6 +39,30 @@ cmp.setup({
   },
 })
 
+-- Support for Deno
+local nvim_lsp = require("lspconfig")
+nvim_lsp.ts_ls.setup({
+  root_dir = nvim_lsp.util.root_pattern("package.json"),
+  single_file_support = false,
+})
+nvim_lsp.lua_ls.setup({
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using
+        -- (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {
+          'vim',
+          'require'
+        },
+      },
+    }
+  }
+})
 lsp.set_sign_icons({
   error = "",
   warn = "",
