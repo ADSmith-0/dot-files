@@ -2,6 +2,7 @@
 PWD=$(eval pwd)
 ln -s $PWD/nvim ~/.config/nvim
 ln -s $PWD/alacritty ~/.config/alacritty
+ln -s $PWD/yazi ~/.config/yazi
 ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWD/.tmux.conf ~/.tmux.conf
 ln -s $PWD/.gitconfig ~/.gitconfig
