@@ -31,10 +31,12 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Buffer navigation
-vim.keymap.set("n", "<Tab>", "<cmd>:bn<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<S-Tab>", "<cmd>:bp<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<Tab>", "<cmd>:BufferLineCycleNext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>:BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<A-x>", "<cmd>:bd<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "<A-l>", "<cmd>:b#<CR>", { desc = "Go to last entered buffer" })
+vim.keymap.set("n", "<A->>", "<cmd>:BufferLineMoveNext<CR>", { desc = "Move buffer to the right" })
+vim.keymap.set("n", "<A-<>", "<cmd>:BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
 
 -- Add new line without exiting normal mode
 vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
