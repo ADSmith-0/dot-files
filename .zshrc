@@ -170,6 +170,7 @@ esac
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
 alias "gs"="gss"
+alias "gc"="git commit"
 alias "gd"="git diff"
 alias "gds"="git diff --staged"
 alias "gda"="git diff ."
