@@ -155,6 +155,8 @@ export FZF_DEFAULT_OPTS="--ansi"
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^f' forward-word # shift + f | complete next word
+bindkey -s '^p' 'ts;clear\n'
+bindkey -s '^[^H' 'cd ..;clear\n'
 
 # pnpm
 export PNPM_HOME="/home/adam/.local/share/pnpm"
