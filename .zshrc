@@ -160,14 +160,6 @@ bindkey '^f' forward-word # shift + f | complete next word
 bindkey -s '^p' 'ts;clear\n'
 bindkey -s '^[^H' 'cd ..;clear\n'
 
-# pnpm
-export PNPM_HOME="/home/adam/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # aliases
 alias "ts"="tmux-sessionizer"
 alias "gss"="git status -s"
@@ -187,3 +179,9 @@ alias "gh"="git log -p"
 alias "pn"="pnpm"
 # aliases end
 
+# pnpm
+export PNPM_HOME="/home/adam/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
