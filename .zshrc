@@ -152,6 +152,8 @@ export FZF_DEFAULT_COMMAND="fdfind --type file --follow --hidden --exclude .git 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--ansi"
 
+# zsh keybinds
+set -o vi
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^f' forward-word # shift + f | complete next word
