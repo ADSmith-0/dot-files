@@ -43,7 +43,7 @@ vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
 vim.keymap.set("n", "<leader><Enter>", "o<Esc>")
 
 -- Tmux sessionzier
-vim.keymap.set("n", "<leader>F", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
+vim.keymap.set("n", "<C-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
 
 -- Refresh snippets
 vim.keymap.set("n", "<leader>sn", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", { desc = "Reload snippets" })
