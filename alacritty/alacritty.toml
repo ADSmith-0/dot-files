@@ -1,5 +1,5 @@
 [colors]
-draw_bold_text_with_bright_colors = false
+draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 background = "#282c34"
@@ -43,7 +43,7 @@ white = "#abb2bf"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "semibold" }
-size = 13.5
+size = 12
 
 [window]
 # padding = { x = 16, y = 16 }

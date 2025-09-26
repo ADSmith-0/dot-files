@@ -11,5 +11,8 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
 
+#tmux
+sudo apt install tmux
+
 # tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
