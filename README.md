@@ -11,6 +11,9 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 - [OhMyZsh](https://ohmyz.sh/)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) (oh my zsh plugin)
 
+### Fzf
+Fzf is usually out of date on most package managers so it's better to [install it from source](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
+
 ### Nvim
 - [nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md) - remember to get the unstable release
 - [fzf](https://github.com/junegunn/fzf) (telescope) - Install MANUALLY, most linux distros are very far behind on the version
@@ -27,5 +30,6 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 
 ## Other stuff to remember
 - [Setup git ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  - Note: That the git remote origin has to be `ssh` for this to work, if you use http(s) it will not use SSH
 - Remember to change the email in the `.gitconfig`
 - Open tmux and run: `prefix + I` to install dependencies
