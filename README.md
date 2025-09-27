@@ -14,6 +14,9 @@ Sometimes the `install_dependencies` won't work as expected, so here is a list o
 ### Fzf
 Fzf is usually out of date on most package managers so it's better to [install it from source](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git)
 
+### Alacritty
+- [Install](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#prerequisites)
+
 ### Nvim
 - [nvim](https://github.com/neovim/neovim/blob/master/INSTALL.md) - remember to get the unstable release
 - [fzf](https://github.com/junegunn/fzf) (telescope) - Install MANUALLY, most linux distros are very far behind on the version
