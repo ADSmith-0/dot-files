@@ -43,13 +43,13 @@ vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
 vim.keymap.set("n", "<leader><Enter>", "o<Esc>")
 
 -- Tmux sessionzier
-vim.keymap.set("n", "<C-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
+vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
 
 -- Refresh snippets
-vim.keymap.set("n", "<leader>sn", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", { desc = "Reload snippets" })
+vim.keymap.set("n", "<leader>ls", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", { desc = "Reload snippets" })
 
 -- Open config menus
-vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { silent = true, desc = "Open Lazy" })
+vim.keymap.set("n", "<leader>la", "<cmd>Lazy<CR>", { silent = true, desc = "Open Lazy" })
 vim.keymap.set("n", "<leader>cm", "<cmd>Mason<CR>", { silent = true, desc = "Open mason" })
 
 -- TODO Comments
