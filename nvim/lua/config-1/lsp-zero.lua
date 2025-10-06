@@ -39,13 +39,8 @@ cmp.setup({
   },
 })
 
--- Support for Deno
-local nvim_lsp = require("lspconfig")
-nvim_lsp.ts_ls.setup({
-  root_dir = nvim_lsp.util.root_pattern("package.json"),
-  single_file_support = false,
-})
-nvim_lsp.lua_ls.setup({
+vim.lsp.enable("lua_ls")
+vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       runtime = {
