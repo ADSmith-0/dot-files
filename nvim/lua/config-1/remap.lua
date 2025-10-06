@@ -45,8 +45,9 @@ vim.keymap.set("n", "<leader><Enter>", "o<Esc>")
 -- Tmux sessionzier
 vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
 
--- Refresh snippets
+-- Refresh
 vim.keymap.set("n", "<leader>ls", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", { desc = "Reload snippets" })
+vim.keymap.set("n", "<leader>rr", "<cmd>restart<CR>", { desc = "Reload Neovim" })
 
 -- Open config menus
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy<CR>", { silent = true, desc = "Open Lazy" })
