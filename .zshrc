@@ -149,8 +149,8 @@ set -o vi
 bindkey '^I'   complete-word       # tab          | complete
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 bindkey '^f' forward-word # shift + f | complete next word
-bindkey -s '^p' 'ts;clear\n'
-bindkey -s '^[^H' 'cd ..;clear\n'
+bindkey -s '^[p' 'ts;clear\n' # alt + p | Open project
+bindkey -s '^[.' 'cd ..;clear\n' # alt + . | up 1 directory
 
 # aliases
 alias "ts"="tmux-sessionizer"
