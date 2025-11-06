@@ -70,21 +70,11 @@ local plugins = {
     main = "ibl",
   },
   {
-    "mikavilpas/yazi.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      -- check the installation instructions at
-      -- https://github.com/folke/snacks.nvim
-      "folke/snacks.nvim"
-    },
-    keys = {
-      {
-        "<leader>e",
-        mode = { "n", "v" },
-        "<cmd>Yazi<cr>",
-        desc = "Open yazi at the current file",
-      },
-    },
+    'stevearc/oil.nvim',
+    opts = {},
+    dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    lazy = false,
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -183,6 +173,7 @@ require("config-1.theme")
 require("config-1.lsp-zero")
 require("config-1.luasnip")
 require("config-1.lualine")
+require("config-1.oil")
 require("config-1.comment")
 require("config-1.bufferline")
 require("config-1.colorizer")
