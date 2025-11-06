@@ -3,6 +3,7 @@
 	email = change me
 [push]
 	autoSetupRemote = true
+  default = current
 [core]
 	editor = nvim
 	pager = less -x2
