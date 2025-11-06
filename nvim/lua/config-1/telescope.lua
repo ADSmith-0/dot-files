@@ -2,7 +2,7 @@ require('telescope').setup {
   defaults = {
     color_devicons = true,
     sorting_strategy = "ascending",
-    path_displays = "smart",
+    path_displays = "truncate",
     layout_strategy = "horizontal",
     layout_config = {
       prompt_position = "top",
