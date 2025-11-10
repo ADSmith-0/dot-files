@@ -5,7 +5,7 @@ require('telescope').setup {
     path_display = { "smart" },
     layout_strategy = "horizontal",
     prompt_prefix = " 🔍 ",
-    selection_caret = ">  ",
+    selection_caret = "▋  ",
     layout_config = {
       prompt_position = "top",
       preview_width = 0.70,
