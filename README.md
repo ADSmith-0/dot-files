@@ -1,6 +1,6 @@
 # Dot files for my terminal setup
 - `install.sh` - Runs `install_dependencies.sh` and `unpack.sh`
-- `install_dependencies.sh` - Install necessary dependencies to make everything work
+- `install-dependencies.sh` - Install necessary dependencies to make everything work
 - `unpack.sh` - Creates symlinks to necessary areas of the OS, so that everything can be controlled from this directory, but the configs are in the correct place for the tools
 
 ## Dependencies
