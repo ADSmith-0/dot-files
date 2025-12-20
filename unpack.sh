@@ -9,3 +9,4 @@ ln -s $PWD/.gitconfig ~/.gitconfig
 ln -s $PWD/adams.zsh-theme ~/.oh-my-zsh/themes/adams.zsh-theme
 sudo ln -s $PWD/tmux-sessionizer /usr/bin/tmux-sessionizer
 sudo ln -s $PWD/git-add.sh /usr/bin/git-add.sh
+sudo ln -s $PWD/git-sync.sh /usr/bin/git-sync.sh
