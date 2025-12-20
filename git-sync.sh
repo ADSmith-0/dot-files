@@ -7,7 +7,7 @@ while IFS= read -r line; do
   echo "$line"
   if [[ $line =~ $regex ]]; then
     branch="${BASH_REMATCH[1]}"
-    if [[ "git rev-parse --verify $branch 2>/dev/null" ]]; then
+    if git show-ref --quiet --branches $branch; then
       git branch -D "$branch"
     fi
   fi
