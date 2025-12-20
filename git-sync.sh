@@ -2,6 +2,8 @@
 
 regex='- \[deleted\].*-> origin\/(.+)';
 
+git pull
+
 git fetch -p 2>&1 | \
 while IFS= read -r line; do
   echo "$line"
