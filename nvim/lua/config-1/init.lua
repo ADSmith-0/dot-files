@@ -132,10 +132,7 @@ local plugins = {
       })
     end,
   },
-  {
-    "echasnovski/mini.pairs",
-    version = "*"
-  },
+  { 'nvim-mini/mini.pairs', version = '*' },
   {
     "kylechui/nvim-surround",
     version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
