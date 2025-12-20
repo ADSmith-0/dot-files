@@ -3,7 +3,7 @@ local ls = require("luasnip")
 local cmp = require("cmp")
 local cmp_action = require("lsp-zero").cmp_action()
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
   lsp.default_keymaps({ buffer = bufnr })
@@ -91,7 +91,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
       { buffer = event.buf, remap = true, desc = "Code action" })
 
     vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", GetOptsWithDesc("Open diagnostic float"))
-    vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", GetOptsWithDesc("Go to previous error"))
-    vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", GetOptsWithDesc("Go to next error"))
+    vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.jump({ count = -1 })<cr>",
+      GetOptsWithDesc("Go to previous error"))
+    vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.jump({ count = 1 })<cr>",
+      GetOptsWithDesc("Go to next error"))
   end
 });
+
+vim.diagnostic.config({
+  virtual_text = true,
+  severity_sort = true,
+})
