@@ -19,3 +19,5 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 
 vim.opt.termguicolors = true
+
+vim.o.winborder = 'rounded'
