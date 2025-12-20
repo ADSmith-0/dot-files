@@ -6,7 +6,7 @@ else
     selected=$(git branch --list | fzf | xargs)
 fi
 
-if [[ $selected =~ "-" ]]; then
+if [[ $selected == "-" ]]; then
   git switch -
   exit 0
 fi
