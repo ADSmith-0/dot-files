@@ -6,3 +6,5 @@
 8. Replace leap with flash.nvim?
 9. Maybe add in the plugin that combines the nvim bar and the lualine?
 10. Add git signs to oil
+12. Maybe add plugin for git merging? Like fugitive or something?
+13.
