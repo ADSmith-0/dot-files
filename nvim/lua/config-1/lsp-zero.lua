@@ -77,15 +77,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
       }
     end
 
-    vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", GetOptsWithDesc("Get info for symbol"))
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, GetOptsWithDesc("Get info for symbol"))
     vim.keymap.set("n", "M", vim.diagnostic.open_float, GetOptsWithDesc("Open diagnostic float for error"))
-    vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", GetOptsWithDesc("Go to definition"))
-    vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", GetOptsWithDesc("Go to declaration"))
-    vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", GetOptsWithDesc("Go to implementation"))
-    vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", GetOptsWithDesc("Get type definition"))
-    vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", GetOptsWithDesc("Find references for symbol"))
-    vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", GetOptsWithDesc("Signature help"))
-    vim.keymap.set("n", "<leader>rs", "<cmd>lua vim.lsp.buf.rename()<cr>", GetOptsWithDesc("Rename symbol"))
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, GetOptsWithDesc("Go to definition"))
+    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, GetOptsWithDesc("Go to declaration"))
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, GetOptsWithDesc("Go to implementation"))
+    vim.keymap.set("n", "go", vim.lsp.buf.type_definition, GetOptsWithDesc("Get type definition"))
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, GetOptsWithDesc("Find references for symbol"))
+    vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, GetOptsWithDesc("Signature help"))
+    vim.keymap.set("n", "<leader>rs", vim.lsp.buf.rename, GetOptsWithDesc("Rename symbol"))
     vim.keymap.set({ "n", "x" }, "<A-s>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>",
       GetOptsWithDesc("Format buffer"))
     vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>",
