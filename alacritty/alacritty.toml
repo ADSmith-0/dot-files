@@ -13,14 +13,6 @@ cursor = "CellForeground"
 text = "CellBackground"
 cursor = "CellForeground"
 
-#[colors.vi_mode_cursor]
-#text = "CellBackground"
-#cursor = "CellForeground"
-#
-#[colors.selection]
-#text = "CellForeground"
-#background = "#44475a"
-
 [colors.normal]
 black = "#282c34"
 red = "#ef596f"
