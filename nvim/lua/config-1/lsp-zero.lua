@@ -78,6 +78,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", GetOptsWithDesc("Get info for symbol"))
+    vim.keymap.set("n", "M", vim.diagnostic.open_float, GetOptsWithDesc("Open diagnostic float for error"))
     vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", GetOptsWithDesc("Go to definition"))
     vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", GetOptsWithDesc("Go to declaration"))
     vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", GetOptsWithDesc("Go to implementation"))
