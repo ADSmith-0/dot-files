@@ -7,4 +7,4 @@
 10. Add git signs to oil
 12. Maybe add plugin for git merging? Like fugitive or something?
 13. Add command to open pr from command line
-14.
+15. 
