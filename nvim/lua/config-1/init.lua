@@ -170,6 +170,7 @@ local plugins = {
     build = "cd app && npx --yes yarn install",
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
+      vim.g.mkdp_auto_close = 0
     end,
     ft = { "markdown" },
   }
