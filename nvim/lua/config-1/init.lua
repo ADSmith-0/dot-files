@@ -164,6 +164,11 @@ local plugins = {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    opts = {},
+  }
 }
 require("lazy").setup(plugins)
 require("config-1.theme")
