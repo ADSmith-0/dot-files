@@ -57,3 +57,6 @@ vim.keymap.set("n", "<leader>cm", "<cmd>Mason<CR>", { silent = true, desc = "Ope
 
 -- TODO Comments
 vim.keymap.set("n", "<leader>tc", "<cmd>TodoTelescope<CR>", { silent = true, desc = "Search TODO comments" })
+
+-- Markdown previewer
+vim.keymap.set("n", "<leader>md", "<cmd>MarkdownPreview<CR>", { silent = true, desc = "Preview Markdown file" })
