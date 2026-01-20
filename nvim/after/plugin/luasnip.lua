@@ -34,3 +34,8 @@ ls.add_snippets("go", {
   s("enn", fmt("if err != nil {{\n\t{}\n}}", { i(0) })),
   s("aer", fmt("{}, err := {}\nif err != nil {{\n\tlog.Fatal(\"{}\", err)\n}}", { i(1), i(2), i(0) }))
 })
+
+ls.add_snippets("markdown", {
+  s("ili", fmt("<a name=\"{}\">{}</a>", { i(1), i(0) })),
+  s("eli", fmt("[{}]({})", { i(1), i(0) }))
+})
