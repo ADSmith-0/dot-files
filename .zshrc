@@ -166,9 +166,11 @@ alias "gda"="git diff ."
 alias "gadd"="git-add.sh"
 alias "gv"="git-sync.sh"
 alias "gx"="git-switch.sh"
+alias "gr"="git-open-remote.sh"
+alias "gn"="git-open-pr.sh"
 alias "gl"="git log --oneline"
 alias "gg"="git log --oneline --graph"
-alias "gh"="git log -p"
+alias "gf"="git log -p"
 alias "pn"="pnpm"
 # aliases end
 

@@ -6,7 +6,6 @@
 8. Replace leap with flash.nvim?
 10. Add git signs to oil
 12. Maybe add plugin for git merging? Like fugitive or something?
-13. Add command to open pr from command line
 16. Add emmet as default lsp
 17. Make pairs only happen when there is no alphanumeric character to the right
 18.
