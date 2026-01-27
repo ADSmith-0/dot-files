@@ -173,7 +173,8 @@ local plugins = {
       vim.g.mkdp_auto_close = 0
     end,
     ft = { "markdown" },
-  }
+  },
+  { 'akinsho/git-conflict.nvim', version = "*", config = true }
 }
 require("lazy").setup(plugins)
 require("config-1.theme")
@@ -193,4 +194,5 @@ require("config-1.mini-pairs")
 require("config-1.leap")
 require("config-1.todo-comments")
 require("config-1.telescope")
+require("config-1.git-conflict")
 require("config-1.highlight-groups")
