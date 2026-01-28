@@ -16,6 +16,7 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
   },
+  { 'akinsho/git-conflict.nvim', version = "*", config = true },
   {
     "olimorris/onedarkpro.nvim",
     "navarasu/onedark.nvim",
@@ -173,8 +174,7 @@ local plugins = {
       vim.g.mkdp_auto_close = 0
     end,
     ft = { "markdown" },
-  },
-  { 'akinsho/git-conflict.nvim', version = "*", config = true }
+  }
 }
 require("lazy").setup(plugins)
 require("config-1.theme")
