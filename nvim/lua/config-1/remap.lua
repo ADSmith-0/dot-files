@@ -66,3 +66,6 @@ vim.keymap.set("n", "<leader>mdc", "<cmd>MarkdownPreviewStop<CR>", { silent = tr
 vim.keymap.set("n", "gh", "<cmd>diffget 1<CR>", { silent = true, desc = "Pick left file in mergetool" })
 vim.keymap.set("n", "gl", "<cmd>diffget 3<CR>", { silent = true, desc = "Pick right file in mergetool" })
 vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick middle file in mergetool" })
+
+-- Git conflict
+vim.keymap.set("n", "gq", "<cmd>GitConflictListQf<CR><cmd>ccl<CR>", { silent = true, desc = "Load merge conflicts into quickfix list" })
