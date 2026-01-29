@@ -11,3 +11,7 @@
 	pager = less -x2
 [init]
 	defaultBranch = main
+[merge]
+  tool = nvimdiff
+[mergetool "nvimdiff"]
+  cmd = nvim -d -c '4wincmd w | wincmd J' \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"

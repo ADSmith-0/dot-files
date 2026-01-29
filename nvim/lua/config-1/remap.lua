@@ -61,3 +61,8 @@ vim.keymap.set("n", "<leader>tc", "<cmd>TodoTelescope<CR>", { silent = true, des
 -- Markdown previewer
 vim.keymap.set("n", "<leader>mdo", "<cmd>MarkdownPreview<CR>", { silent = true, desc = "Open preview for Markdown file" })
 vim.keymap.set("n", "<leader>mdc", "<cmd>MarkdownPreviewStop<CR>", { silent = true, desc = "Close preview Markdown file" })
+
+-- Mergetool
+vim.keymap.set("n", "gh", "<cmd>diffget 1<CR>", { silent = true, desc = "Pick left file in mergetool" })
+vim.keymap.set("n", "gl", "<cmd>diffget 3<CR>", { silent = true, desc = "Pick right file in mergetool" })
+vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick middle file in mergetool" })
