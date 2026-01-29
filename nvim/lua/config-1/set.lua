@@ -21,3 +21,7 @@ vim.opt.scrolloff = 8
 vim.opt.termguicolors = true
 
 vim.o.winborder = 'rounded'
+
+if vim.opt.diff:get() then
+  vim.o.diffopt = 'internal,filler,closeoff'
+end
