@@ -2,7 +2,6 @@
 1. Add stored history to Undotree
 3. Sort Tmux sessionizer
 5. Fix dashboard key binds and options
-8. Replace leap with flash.nvim?
 10. Add git signs to oil
 16. Add emmet as default lsp
 18. Fix open script does work with https links
