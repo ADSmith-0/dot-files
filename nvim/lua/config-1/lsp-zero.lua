@@ -32,6 +32,15 @@ cmp.setup({
     { name = "luasnip" },
     { name = "buffer" },
   },
+  sorting = {
+    comparators = {
+      cmp.config.compare.locality,
+      cmp.config.compare.recently_used,
+      cmp.config.compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
+      cmp.config.compare.offset,
+      cmp.config.compare.order,
+    }
+  },
   mapping = {
     ["<C-k>"] = cmp_action.luasnip_jump_forward(),
     ["<C-j>"] = cmp_action.luasnip_jump_backward(),
