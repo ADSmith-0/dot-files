@@ -97,9 +97,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>rs", vim.lsp.buf.rename, GetOptsWithDesc("Rename symbol"))
     vim.keymap.set({ "n", "x" }, "<A-s>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>",
       GetOptsWithDesc("Format buffer"))
-    vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>",
-      { buffer = event.buf, remap = true, desc = "Code action" })
-
     vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", GetOptsWithDesc("Open diagnostic float"))
     vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.jump({ count = -1 })<cr>",
       GetOptsWithDesc("Go to previous error"))

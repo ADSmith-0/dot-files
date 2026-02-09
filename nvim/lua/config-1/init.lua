@@ -16,7 +16,7 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
   },
-  { 'akinsho/git-conflict.nvim', version = "v2.1.0", config = true },
+  { 'akinsho/git-conflict.nvim',                version = "v2.1.0", config = true },
   {
     "olimorris/onedarkpro.nvim",
     "navarasu/onedark.nvim",
@@ -36,7 +36,7 @@ local plugins = {
   },
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
-  { "VonHeikemen/lsp-zero.nvim",                branch = "v3.x" },
+  { "VonHeikemen/lsp-zero.nvim",        branch = "v3.x" },
   { "neovim/nvim-lspconfig" },
   { "hrsh7th/cmp-nvim-lsp" },
   { "hrsh7th/nvim-cmp" },
@@ -133,7 +133,7 @@ local plugins = {
       })
     end,
   },
-  { 'nvim-mini/mini.pairs',      version = '*' },
+  { 'nvim-mini/mini.pairs', version = '*' },
   {
     "kylechui/nvim-surround",
     version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
@@ -174,6 +174,9 @@ local plugins = {
       vim.g.mkdp_auto_close = 0
     end,
     ft = { "markdown" },
+  },
+  {
+    "aznhe21/actions-preview.nvim",
   }
 }
 require("lazy").setup(plugins)
@@ -196,3 +199,4 @@ require("config-1.todo-comments")
 require("config-1.telescope")
 require("config-1.git-conflict")
 require("config-1.highlight-groups")
+require("config-1.actions-preview")
