@@ -3,6 +3,6 @@
 3. Sort Tmux sessionizer (add window names and prevent it from closing when I exit neovim)
 5. Remove dashboard
 21. Write nvim plugin to handle smart quotes (Only do 1 when there's an odd number on a line, do two when there's an even number on the line)
-22. Add in additional telescope keymaps
 23. Add in [actions-preview](https://github.com/aznhe21/actions-preview.nvim)
-24.
+24. Make LSP organise based on last used
+25. 
