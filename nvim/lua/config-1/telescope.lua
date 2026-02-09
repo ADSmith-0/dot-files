@@ -8,9 +8,11 @@ require('telescope').setup {
     selection_caret = "▋ ",
     layout_config = {
       prompt_position = "top",
-      preview_width = 0.70,
       height = 0.99,
       width = 0.99,
+      horizontal = {
+        preview_width = 0.70
+      }
     },
     file_ignore_patterns = {
       ".git",
