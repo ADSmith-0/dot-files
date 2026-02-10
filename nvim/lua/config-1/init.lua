@@ -177,6 +177,9 @@ local plugins = {
   },
   {
     "aznhe21/actions-preview.nvim",
+  },
+  {
+    "folke/twilight.nvim",
   }
 }
 require("lazy").setup(plugins)
@@ -200,3 +203,4 @@ require("config-1.telescope")
 require("config-1.git-conflict")
 require("config-1.highlight-groups")
 require("config-1.actions-preview")
+require("config-1.twilight")
