@@ -4,5 +4,4 @@
 5. Remove dashboard
 21. Write nvim plugin to handle smart quotes (Only do 1 when there's an odd number on a line, do two when there's an even number on the line)
 25. Add in changing to `main` branch to git-sync script
-26. Try out [twilight](https://github.com/folke/twilight.nvim)
 27.
