@@ -185,9 +185,9 @@ local plugins = {
     "folke/snacks.nvim",
     opts = {
       bigfile = {
-        notify = true,              -- show notification when big file detected
-        size = 1.5 * 1024 * 1024,   -- 1.5MB
-        line_length = 1000,         -- average line length (useful for minified files)
+        notify = true,            -- show notification when big file detected
+        size = 1.5 * 1024 * 1024, -- 1.5MB
+        line_length = 1000,       -- average line length (useful for minified files)
         -- Enable or disable features when big file detected
         ---@param ctx {buf: number, ft:string}
         setup = function(ctx)
@@ -206,6 +206,10 @@ local plugins = {
         end,
       }
     }
+  },
+  {
+    'stevearc/conform.nvim',
+    opts = {},
   }
 }
 require("lazy").setup(plugins)
@@ -230,3 +234,4 @@ require("config-1.git-conflict")
 require("config-1.highlight-groups")
 require("config-1.actions-preview")
 require("config-1.twilight")
+require("config-1.conform")
