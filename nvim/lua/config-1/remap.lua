@@ -71,4 +71,4 @@ vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick mi
 vim.keymap.set("n", "gq", "<cmd>GitConflictListQf<CR><cmd>ccl<CR>", { silent = true, desc = "Load merge conflicts into quickfix list" })
 
 -- Twilight
-vim.keymap.set("n", "dim", "<cmd>Twilight<CR>", { silent = true, desc = "Toggle twilight" })
+vim.keymap.set("n", "<leader>twi", "<cmd>Twilight<CR>", { silent = true, desc = "Toggle twilight" })
