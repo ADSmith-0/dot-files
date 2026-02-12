@@ -56,16 +56,6 @@ local plugins = {
   { "saadparwaiz1/cmp_luasnip" },
   { "HiPhish/rainbow-delimiters.nvim" },
   {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    config = function()
-      require("dashboard").setup {
-        --config
-      }
-    end,
-    dependencies = { { "nvim-tree/nvim-web-devicons" } }
-  },
-  {
     "lukas-reineke/indent-blankline.nvim",
     event = { "BufReadPost", "BufWritePost", "BufNewFile" },
     main = "ibl",
@@ -119,7 +109,6 @@ local plugins = {
         pattern = {
           "help",
           "alpha",
-          "dashboard",
           "NvimTree",
           "Trouble",
           "trouble",
