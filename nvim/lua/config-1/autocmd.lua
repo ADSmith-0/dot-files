@@ -18,3 +18,12 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     vim.opt.relativenumber = true
   end
 })
+
+vim.api.nvim_create_user_command("F", function()
+  require("conform").format({ lsp_format = "fallback" })
+end, {})
+
+vim.api.nvim_create_user_command("Fw", function()
+  require("conform").format({ lsp_format = "fallback" })
+  vim.cmd("write")
+end, {})
