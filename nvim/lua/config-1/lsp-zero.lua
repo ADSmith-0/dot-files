@@ -102,6 +102,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set({ "n", "x" }, "<A-s>", function()
       require("conform").format({ lsp_format = "fallback" })
     end, GetOptsWithDesc("Format buffer"))
+    -- Alt Gr + s
+    vim.keymap.set({ "n", "x" }, "ß", function()
+      require("conform").format({ lsp_format = "fallback" })
+    end, GetOptsWithDesc("Format buffer"))
     vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", GetOptsWithDesc("Open diagnostic float"))
     vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.jump({ count = -1 })<cr>",
       GetOptsWithDesc("Go to previous error"))

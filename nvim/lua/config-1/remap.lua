@@ -38,7 +38,12 @@ vim.keymap.set("n", "<A-x>", "<cmd>bd<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "<A-l>", "<cmd>b#<CR>", { desc = "Go to last entered buffer" })
 vim.keymap.set("n", "<A->>", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer to the right" })
 vim.keymap.set("n", "<A-<>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
-vim.keymap.set("n", "<A-<>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
+-- Alt Gr keybinds
+vim.keymap.set("n", "Ł", "<cmd>w<CR>", { desc = "Save current buffer" })
+vim.keymap.set("n", "»", "<cmd>bd<CR>", { desc = "Close current buffer" })
+vim.keymap.set("n", "ł", "<cmd>b#<CR>", { desc = "Go to last entered buffer" })
+vim.keymap.set("n", "·", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer to the right" })
+vim.keymap.set("n", "─", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
 
 -- Add new line without exiting normal mode
 vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
@@ -72,3 +77,14 @@ vim.keymap.set("n", "gq", "<cmd>GitConflictListQf<CR><cmd>ccl<CR>", { silent = t
 
 -- Twilight
 vim.keymap.set("n", "<leader>twi", "<cmd>Twilight<CR>", { silent = true, desc = "Toggle twilight" })
+
+vim.api.nvim_create_user_command("F", function()
+  require("conform").format({ lsp_format = "fallback" })
+end, {})
+
+vim.api.nvim_create_user_command("Fw", function()
+  require("conform").format({ lsp_format = "fallback" })
+  vim.cmd("write")
+end, {})
+
+vim.api.nvim_create_user_command("X", ":bd", {})
