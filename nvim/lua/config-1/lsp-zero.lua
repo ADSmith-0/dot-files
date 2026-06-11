@@ -91,7 +91,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 
     vim.keymap.set("n", "K", vim.lsp.buf.hover, GetOptsWithDesc("Get info for symbol"))
-    vim.keymap.set("n", "M", vim.diagnostic.open_float, GetOptsWithDesc("Open diagnostic float for error"))
+    vim.keymap.set("n", "<C-K>", vim.diagnostic.open_float, GetOptsWithDesc("Open diagnostic float for error"))
+    vim.keymap.set("n", "gl", vim.diagnostic.open_float, GetOptsWithDesc("Open diagnostic float"))
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, GetOptsWithDesc("Go to definition"))
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, GetOptsWithDesc("Go to declaration"))
     vim.keymap.set("n", "gi", vim.lsp.buf.implementation, GetOptsWithDesc("Go to implementation"))
@@ -106,7 +107,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set({ "n", "x" }, "ß", function()
       require("conform").format({ lsp_format = "fallback" })
     end, GetOptsWithDesc("Format buffer"))
-    vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", GetOptsWithDesc("Open diagnostic float"))
     vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.jump({ count = -1 })<cr>",
       GetOptsWithDesc("Go to previous error"))
     vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.jump({ count = 1 })<cr>",
