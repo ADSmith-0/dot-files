@@ -16,7 +16,9 @@ require('telescope').setup {
     },
     file_ignore_patterns = {
       ".git",
-      "node_modules"
+      "node_modules",
+      "android",
+      "ios"
     },
   }
 }
