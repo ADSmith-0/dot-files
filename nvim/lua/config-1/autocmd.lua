@@ -24,6 +24,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
     if vim.bo[opts.buf].filetype == 'TelescopePrompt' or vim.bo[opts.buf].filetype == 'TelescopeResults' then
       return
     end
-    vim.opt.relativenumber = true
+    vim.cmd("GitConflictRefresh")
   end
 })
