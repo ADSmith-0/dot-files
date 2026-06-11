@@ -1,5 +1,7 @@
 -- Auto format on save
 -- vim.cmd([[autocmd BufWritePost * lua vim.lsp.buf.format()]])
+
+-- Change to absolute numbers when in insert mode and change to relative numbers in normal mode
 -- vim.api.nvim_create_autocmd("InsertEnter", {
 --   desc = "Disable relative line numbers",
 --   callback = function(opts)
@@ -18,6 +20,8 @@
 --     vim.opt.relativenumber = true
 --   end
 -- })
+
+-- Trigger git conflict refresh on buffer attach
 vim.api.nvim_create_autocmd("BufEnter", {
   desc = "Enable relative line numbers",
   callback = function(opts)
