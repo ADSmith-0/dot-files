@@ -167,6 +167,7 @@ local plugins = {
   {
     "aznhe21/actions-preview.nvim",
   },
+  { "mbbill/undotree"},
   {
     "folke/twilight.nvim",
   },

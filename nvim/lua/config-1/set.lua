@@ -12,6 +12,7 @@ vim.opt.wrap = true
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
+vim.g.undotree_WindowLayout = 2
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true

@@ -72,6 +72,9 @@ vim.keymap.set("n", "gh", "<cmd>diffget 1<CR>", { silent = true, desc = "Pick le
 vim.keymap.set("n", "gl", "<cmd>diffget 3<CR>", { silent = true, desc = "Pick right file in mergetool" })
 vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick middle file in mergetool" })
 
+-- Undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { silent = true, desc = "open undotree" })
+
 -- Git conflict
 vim.keymap.set("n", "gq", "<cmd>GitConflictListQf<CR><cmd>ccl<CR>", { silent = true, desc = "Load merge conflicts into quickfix list" })
 
