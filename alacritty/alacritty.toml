@@ -35,7 +35,7 @@ white = "#abb2bf"
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font", style = "bold" }
-size = 12
+size = 11.5
 
 [window]
 padding = { x = 8, y = 2 }
