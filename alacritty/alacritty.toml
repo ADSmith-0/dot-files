@@ -34,7 +34,7 @@ cyan = "#2bbac5"
 white = "#abb2bf"
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "bold" }
+normal = { family = "JetBrainsMono Nerd Font", style = "semibold" }
 size = 11.5
 
 [window]
