@@ -1,13 +1,6 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 0
-vim.opt.shiftwidth = 0
--- vim.opt.autoindent = true
--- vim.opt.smartindent = true
-vim.opt.expandtab = true
-
 vim.opt.wrap = true
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"

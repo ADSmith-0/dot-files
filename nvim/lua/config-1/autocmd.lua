@@ -31,3 +31,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.cmd("GitConflictRefresh")
   end
 })
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    -- Force these specific values locally for this buffer
+    vim.opt_local.tabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.expandtab = false
+  end,
+})
