@@ -19,3 +19,6 @@ vim.o.winborder = 'rounded'
 if vim.opt.diff:get() then
   vim.o.diffopt = 'internal,filler,closeoff'
 end
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" });
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" });
