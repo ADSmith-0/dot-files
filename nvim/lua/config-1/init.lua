@@ -3,6 +3,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require("config-1.remap")
+require("config-1.set")
 require("config-1.lazy")
 local plugins = {
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
@@ -224,4 +225,3 @@ require("config-1.highlight-groups")
 require("config-1.actions-preview")
 require("config-1.twilight")
 require("config-1.conform")
-require("config-1.set")
