@@ -7,9 +7,11 @@ ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWD/.tmux.conf ~/.tmux.conf
 ln -s $PWD/.gitconfig ~/.gitconfig
 ln -s $PWD/adams.zsh-theme ~/.oh-my-zsh/themes/adams.zsh-theme
-sudo ln -s $PWD/tmux-sessionizer /usr/bin/tmux-sessionizer
-sudo ln -s $PWD/git-add.sh /usr/bin/git-add.sh
-sudo ln -s $PWD/git-sync.sh /usr/bin/git-sync.sh
-sudo ln -s $PWD/git-switch.sh /usr/bin/git-switch.sh
-sudo ln -s $PWD/git-open-remote.sh /usr/bin/git-open-remote.sh
-sudo ln -s $PWD/git-open-pr.sh /usr/bin/git-open-pr.sh
+
+mkdir ~/.local/bin
+ln -s $PWD/tmux-sessionizer ~/.local/bin/tmux-sessionizer
+ln -s $PWD/git-add.sh ~/.local/bin/git-add.sh
+ln -s $PWD/git-sync.sh ~/.local/bin/git-sync.sh
+ln -s $PWD/git-switch.sh ~/.local/bin/git-switch.sh
+ln -s $PWD/git-open-remote.sh ~/.local/bin/git-open-remote.sh
+ln -s $PWD/git-open-pr.sh ~/.local/bin/git-open-pr.sh
