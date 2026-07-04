@@ -47,14 +47,32 @@ return {
 	{ "mason-org/mason.nvim", opts = {}, lazy = true },
 	{ "neovim/nvim-lspconfig", lazy = true },
 	{
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-		"hrsh7th/cmp-cmdline",
-		"hrsh7th/nvim-cmp",
+		"saghen/blink.cmp",
+		-- dependencies = { "rafamadriz/friendly-snippets" },
+		version = "1.*",
+		opts = {
+			keymap = {
+				preset = "default",
+				["<Tab>"] = { "select_and_accept" },
+			},
+			completion = { documentation = { auto_show = true } },
+			snippets = { preset = "luasnip" },
+			cmdline = {
+				keymap = {
+					preset = "default",
+					["<Tab>"] = { "accept" },
+				},
+				completion = { menu = { auto_show = true } },
+			},
+		},
+		opts_extend = { "sources.default" },
+	},
+	{
 		"L3MON4D3/LuaSnip",
-		"saadparwaiz1/cmp_luasnip",
-		lazy = true,
+		-- follow latest release.
+		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+		-- install jsregexp (optional!).
+		build = "make install_jsregexp",
 	},
 	{ "olimorris/onedarkpro.nvim", lazy = true },
 	{ "stevearc/conform.nvim", opts = {} },
@@ -89,6 +107,7 @@ return {
 	{ "norcalli/nvim-colorizer.lua", lazy = true },
 	{
 		"aznhe21/actions-preview.nvim",
+		commit = "2b604b2e8e662c03b716436f6ffebcb19663e66a",
 		lazy = true,
 		config = function()
 			vim.keymap.set({ "v", "n" }, "<leader>ca", require("actions-preview").code_actions)
