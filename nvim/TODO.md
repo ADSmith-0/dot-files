@@ -1,7 +1,14 @@
-- auto-session
 - gitsigns
 - git conflict
 - mason
 - cmp/lsp
 - indent line
+- rainbow delimiters
 - surround
+- conform
+- lualine
+- bufferline
+- colorizer
+- pairs
+- actions preview
+- markdown preview

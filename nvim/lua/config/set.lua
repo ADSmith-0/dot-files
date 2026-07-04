@@ -19,6 +19,9 @@ vim.opt.termguicolors = true
 
 vim.o.winborder = 'rounded'
 
+-- auto-session
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- if vim.opt.diff:get() then
 --  vim.o.diffopt = 'internal,filler,closeoff'
 -- end
