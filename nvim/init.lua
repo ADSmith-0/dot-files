@@ -1,1 +1,7 @@
-require("config-1")
+require("config.lazy")
+require("config.treesitter")
+require("config.remap")
+require("config.telescope")
+require("config.oil")
+require("config.theme")
+require("config.highlight-groups")
