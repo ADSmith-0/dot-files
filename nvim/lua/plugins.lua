@@ -60,7 +60,9 @@ return {
 			cmdline = {
 				keymap = {
 					preset = "default",
-					["<Tab>"] = { "select_accept_and_enter" },
+					["<Tab>"] = { "select_accept_and_enter", "show" },
+					["<S-Tab>"] = { "select_accept_and_enter", "show" },
+					["<C-n>"] = { "select_next", "show", "fallback" },
 				},
 				completion = {
 					menu = {
