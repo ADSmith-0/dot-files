@@ -1,4 +1,4 @@
--- Make Telescope UI the same colour as nvim background
+-- Make windows transparent
 vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "GitConflictCurrentLabel", { bg = "#2a5c64" })
@@ -8,4 +8,3 @@ vim.api.nvim_set_hl(0, "GitConflictIncoming", { bg = "#38463f" })
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-vim.api.nvim_set_hl(0, "OilFile", { bg = "none" })

@@ -1,4 +1,5 @@
 return {
+	{ "xiyaowong/transparent.nvim" },
 	{ "rmagatti/auto-session", lazy = false, opts = {} },
 	{ "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate", branch = "master" },
 	{ "akinsho/bufferline.nvim", version = "*", lazy = true },
