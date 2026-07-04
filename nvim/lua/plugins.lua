@@ -62,7 +62,15 @@ return {
 					preset = "default",
 					["<Tab>"] = { "accept" },
 				},
-				completion = { menu = { auto_show = true } },
+				completion = {
+					menu = {
+						auto_show = function()
+							return vim.fn.getcmdtype() == "/" or vim.fn.getcmdtype() == "?"
+							-- enable for inputs as well, with:
+							-- or vim.fn.getcmdtype() == '@'
+						end,
+					},
+				},
 			},
 		},
 		opts_extend = { "sources.default" },
