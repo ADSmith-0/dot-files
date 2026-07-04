@@ -3,6 +3,7 @@ vim.g.maplocalleader = "\\"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
 vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = true
