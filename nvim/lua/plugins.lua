@@ -94,4 +94,11 @@ return {
 		-- this is equivalent to setup({}) function
 	},
 	{ "norcalli/nvim-colorizer.lua", lazy = true },
+	{
+		"aznhe21/actions-preview.nvim",
+		lazy = true,
+		config = function()
+			vim.keymap.set({ "v", "n" }, "ca", require("actions-preview").code_actions)
+		end,
+	},
 }
