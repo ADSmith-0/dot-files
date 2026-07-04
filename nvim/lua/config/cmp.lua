@@ -1,53 +1,76 @@
-local ls = require("luasnip")
 local cmp = require("cmp")
 
--- vim.lsp.on_attach(function(_, bufnr)
---   -- see :help lsp-zero-keybindings
---   -- to learn the available actions
---   vim.lsp.default_keymaps({ buffer = bufnr })
--- end)
-
-cmp.setup({
-  preselect = "item",
-  completion = {
-    completeopt = "menu,menuone,noinsert"
-  },
-  snippet = {
-    expand = function(args)
-      ls.lsp_expand(args.body)
-    end
-  },
-  sources = {
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
-    { name = "buffer" },
-  },
-  sorting = {
-    comparators = {
-      cmp.config.compare.offset,
-      cmp.config.compare.exact,
-      cmp.config.compare.recently_used,
-      cmp.config.compare.locality,
-      cmp.config.compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
-      cmp.config.compare.kind,
-      cmp.config.compare.sort_text,
-      cmp.config.compare.length,
-      cmp.config.compare.order,
-    }
-  },
-  -- mapping = {
-  --   ["<C-k>"] = cmp_action.luasnip_jump_forward(),
-  --   ["<C-j>"] = cmp_action.luasnip_jump_backward(),
-  --   ["<Tab>"] = cmp.mapping.confirm({ select = false })
-  -- },
-})
-
--- vim.lsp.set_sign_icons({
---   error = "",
---   warn = "",
---   hint = "",
---   info = "",
+-- cmp.setup({
+--   sorting = {
+--     comparators = {
+--       cmp.config.compare.offset,
+--       cmp.config.compare.exact,
+--       cmp.config.compare.recently_used,
+--       cmp.config.compare.locality,
+--       cmp.config.compare.score, -- based on :  score = score + ((#sources - (source_index - 1)) * sorting.priority_weight)
+--       cmp.config.compare.kind,
+--       cmp.config.compare.sort_text,
+--       cmp.config.compare.length,
+--       cmp.config.compare.order,
+--     }
+--   },
+--   -- mapping = {
+--   --   ["<C-k>"] = cmp_action.luasnip_jump_forward(),
+--   --   ["<C-j>"] = cmp_action.luasnip_jump_backward(),
+--   --   ["<Tab>"] = cmp.mapping.confirm({ select = false })
+--   -- },
 -- })
+
+
+  cmp.setup({
+    preselect = "item",
+    completion = {
+      completeopt = "menu,menuone,noinsert"
+    },
+    snippet = {
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+      end,
+    },
+    window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    }),
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'luasnip' }, -- For luasnip users.
+    }, {
+      { name = 'buffer' },
+    })
+  })
+
+  -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline({ '/', '?' }, {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    }),
+    matching = { disallow_symbol_nonprefix_matching = false }
+  })
+
+  -- Set up lspconfig.
+  require('cmp_nvim_lsp').default_capabilities()
 
 vim.api.nvim_create_autocmd("LspAttach", {
   desc = "LSP actions",
@@ -86,5 +109,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.diagnostic.config({
   virtual_text = true,
   severity_sort = true,
+  signs = {
+	text = {
+	   [vim.diagnostic.severity.ERROR] = " ",
+           [vim.diagnostic.severity.WARN] = " ",
+           [vim.diagnostic.severity.HINT] = "",
+           [vim.diagnostic.severity.INFO] = "" ,
+	}
+  }
 })
-
