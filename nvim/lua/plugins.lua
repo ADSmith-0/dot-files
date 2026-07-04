@@ -110,4 +110,5 @@ return {
 	{ "hiphish/rainbow-delimiters.nvim", lazy = true },
 	-- { "mbbill/undotree", lazy = true },
 	{ "akinsho/git-conflict.nvim", version = "*", config = true },
+	{ "nvim-mini/mini.indentscope", version = "*", lazy = true },
 }
