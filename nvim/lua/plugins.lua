@@ -22,5 +22,5 @@ return {
 	},
 	{ "folke/todo-comments.nvim", opts = {} },
 	{ "nvim-lua/plenary.nvim", lazy = true },
-	{ "olimorris/onedarkpro.nvim" }
+	{ "olimorris/onedarkpro.nvim", lazy = true }
 } 

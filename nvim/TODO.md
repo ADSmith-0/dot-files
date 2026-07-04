@@ -1,0 +1,7 @@
+- auto-session
+- gitsigns
+- git conflict
+- mason
+- cmp/lsp
+- indent line
+- surround
