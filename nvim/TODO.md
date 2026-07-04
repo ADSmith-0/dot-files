@@ -3,7 +3,6 @@
 - rainbow delimiters
 - bufferline
 - colorizer
-- pairs
 - actions preview
 - markdown preview
 
