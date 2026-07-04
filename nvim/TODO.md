@@ -1,8 +1,6 @@
 - git conflict
-- indent line
 - rainbow delimiters
 - bufferline
-- actions preview
 - markdown preview
 
 - Fix issue where bg colour for barbar is incorrect

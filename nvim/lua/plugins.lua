@@ -101,4 +101,10 @@ return {
 			vim.keymap.set({ "v", "n" }, "ca", require("actions-preview").code_actions)
 		end,
 	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {},
+		lazy = true
+	},
 }
