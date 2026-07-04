@@ -108,4 +108,5 @@ return {
 		lazy = true,
 	},
 	{ "hiphish/rainbow-delimiters.nvim", lazy = true },
+	-- { "mbbill/undotree", lazy = true },
 }
