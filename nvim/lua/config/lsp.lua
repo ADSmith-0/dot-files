@@ -9,9 +9,8 @@ vim.lsp.config("lua_ls", {
 })
 
 require("mason-lspconfig").setup({
-  ensure_installed = { "ts_ls", "emmet_language_server" },
-  handlers = {
-    vim.lsp.default_setup,
-  }
+	ensure_installed = { "ts_ls", "emmet_language_server" },
+	handlers = {
+		vim.lsp.default_setup,
+	}
 })
-
