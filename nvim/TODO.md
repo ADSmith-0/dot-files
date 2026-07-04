@@ -1,4 +1,3 @@
-- git conflict
 - bufferline
 - markdown preview
 
