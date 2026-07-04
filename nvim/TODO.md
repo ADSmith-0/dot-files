@@ -1,7 +1,6 @@
 - git conflict
 - indent line
 - rainbow delimiters
-- lualine
 - bufferline
 - colorizer
 - pairs

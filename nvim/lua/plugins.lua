@@ -66,4 +66,5 @@ return {
 	{ "olimorris/onedarkpro.nvim", lazy = true },
 	{ "stevearc/conform.nvim", opts = {} },
 	{ "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy", lazy = true },
+	{ 'nvim-lualine/lualine.nvim', lazy = true }
 }
