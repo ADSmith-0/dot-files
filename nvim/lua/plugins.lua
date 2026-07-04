@@ -1,10 +1,17 @@
 return {
-	{ "rmagatti/auto-session",           lazy = false,       opts = {}, },
-	{ "nvim-treesitter/nvim-treesitter", lazy = false,       build = ":TSUpdate", branch = "master" },
-	{ "romgrk/barbar.nvim",              version = "^1.0.0", lazy = true,         init = function() vim.g.barbar_auto_setup = false end, },
-	{ "nvim-tree/nvim-web-devicons",     lazy = true },
-	{ "lewis6991/gitsigns.nvim",         lazy = true },
-	{ "stevearc/oil.nvim",               opts = {},          lazy = false, },
+	{ "rmagatti/auto-session", lazy = false, opts = {} },
+	{ "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate", branch = "master" },
+	{
+		"romgrk/barbar.nvim",
+		version = "^1.0.0",
+		lazy = true,
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+	},
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{ "lewis6991/gitsigns.nvim", lazy = true },
+	{ "stevearc/oil.nvim", opts = {}, lazy = false },
 	{ "nvim-mini/mini.icons" },
 	{
 		"nvim-telescope/telescope.nvim",
@@ -13,10 +20,10 @@ return {
 			-- optional but recommended
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		},
-		lazy = true
+		lazy = true,
 	},
 	{ "folke/todo-comments.nvim", opts = {} },
-	{ "nvim-lua/plenary.nvim",    lazy = true },
+	{ "nvim-lua/plenary.nvim", lazy = true },
 	{
 		"christoomey/vim-tmux-navigator",
 		cmd = {
@@ -28,13 +35,13 @@ return {
 			"TmuxNavigatorProcessList",
 		},
 		keys = {
-			{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
-		lazy = true
+		lazy = true,
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
@@ -44,18 +51,18 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 	},
-	{ "mason-org/mason.nvim",  opts = {},  lazy = true },
+	{ "mason-org/mason.nvim", opts = {}, lazy = true },
 	{ "neovim/nvim-lspconfig", lazy = true },
 	{
-		'hrsh7th/cmp-nvim-lsp',
-		'hrsh7th/cmp-buffer',
-		'hrsh7th/cmp-path',
-		'hrsh7th/cmp-cmdline',
-		'hrsh7th/nvim-cmp',
-		'L3MON4D3/LuaSnip',
-		'saadparwaiz1/cmp_luasnip',
-		lazy = true
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-cmdline",
+		"hrsh7th/nvim-cmp",
+		"L3MON4D3/LuaSnip",
+		"saadparwaiz1/cmp_luasnip",
+		lazy = true,
 	},
 	{ "olimorris/onedarkpro.nvim", lazy = true },
-	{ 'stevearc/conform.nvim',     opts = {}, }
+	{ "stevearc/conform.nvim", opts = {} },
 }

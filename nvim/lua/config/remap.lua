@@ -15,16 +15,16 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Copy to clipboard
-vim.keymap.set("n", "<leader>y", "\"+yy")
-vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>y", '"+yy')
+vim.keymap.set("v", "<leader>y", '"+y')
 
 -- Paste from clipboard
-vim.keymap.set("n", "<leader>p", "\"+p")
-vim.keymap.set("v", "<leader>p", "\"+p")
+vim.keymap.set("n", "<leader>p", '"+p')
+vim.keymap.set("v", "<leader>p", '"+p')
 
 -- Delete without copying to clipboard
-vim.keymap.set("n", "<leader>d", "\"_dd")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", '"_dd')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 -- Remap Ctrl+C to Esc as they are similar but not the exact same
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -52,7 +52,12 @@ vim.keymap.set("n", "<C-Enter>", "o<Esc>")
 vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
 
 -- Refresh
-vim.keymap.set("n", "<leader>ls", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", { desc = "Reload snippets" })
+vim.keymap.set(
+	"n",
+	"<leader>ls",
+	"<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>",
+	{ desc = "Reload snippets" }
+)
 vim.keymap.set("n", "<leader>rr", "<cmd>restart<CR>", { desc = "Reload Neovim" })
 
 -- Open config menus
@@ -63,8 +68,18 @@ vim.keymap.set("n", "<leader>cm", "<cmd>Mason<CR>", { silent = true, desc = "Ope
 vim.keymap.set("n", "<leader>tc", "<cmd>TodoTelescope<CR>", { silent = true, desc = "Search TODO comments" })
 
 -- Markdown previewer
-vim.keymap.set("n", "<leader>mdo", "<cmd>MarkdownPreview<CR>", { silent = true, desc = "Open preview for Markdown file" })
-vim.keymap.set("n", "<leader>mdc", "<cmd>MarkdownPreviewStop<CR>", { silent = true, desc = "Close preview Markdown file" })
+vim.keymap.set(
+	"n",
+	"<leader>mdo",
+	"<cmd>MarkdownPreview<CR>",
+	{ silent = true, desc = "Open preview for Markdown file" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>mdc",
+	"<cmd>MarkdownPreviewStop<CR>",
+	{ silent = true, desc = "Close preview Markdown file" }
+)
 
 -- Mergetool
 vim.keymap.set("n", "gh", "<cmd>diffget 1<CR>", { silent = true, desc = "Pick left file in mergetool" })
@@ -75,18 +90,23 @@ vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick mi
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { silent = true, desc = "open undotree" })
 
 -- Git conflict
-vim.keymap.set("n", "gq", "<cmd>GitConflictListQf<CR><cmd>ccl<CR>", { silent = true, desc = "Load merge conflicts into quickfix list" })
+vim.keymap.set(
+	"n",
+	"gq",
+	"<cmd>GitConflictListQf<CR><cmd>ccl<CR>",
+	{ silent = true, desc = "Load merge conflicts into quickfix list" }
+)
 
 -- Twilight
 vim.keymap.set("n", "<leader>twi", "<cmd>Twilight<CR>", { silent = true, desc = "Toggle twilight" })
 
 vim.api.nvim_create_user_command("F", function()
-  require("conform").format({ lsp_format = "fallback" })
+	require("conform").format({ lsp_format = "fallback" })
 end, {})
 
 vim.api.nvim_create_user_command("Fw", function()
-  require("conform").format({ lsp_format = "fallback" })
-  vim.cmd("write")
+	require("conform").format({ lsp_format = "fallback" })
+	vim.cmd("write")
 end, {})
 
 vim.api.nvim_create_user_command("X", ":bd", {})
