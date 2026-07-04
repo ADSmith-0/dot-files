@@ -105,6 +105,7 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		opts = {},
-		lazy = true
+		lazy = true,
 	},
+	{ "hiphish/rainbow-delimiters.nvim", lazy = true },
 }

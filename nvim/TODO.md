@@ -1,5 +1,4 @@
 - git conflict
-- rainbow delimiters
 - bufferline
 - markdown preview
 
