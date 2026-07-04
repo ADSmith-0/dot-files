@@ -1,10 +1,14 @@
 - git conflict
 - indent line
 - rainbow delimiters
-- surround
 - lualine
 - bufferline
 - colorizer
 - pairs
 - actions preview
 - markdown preview
+
+- Fix issue where bg colour for barbar is incorrect
+- Fix CLS of side bar when git changes first happen
+- Add rust specific LSP?
+- Fix issue with sveltekit not finding the $lib file
