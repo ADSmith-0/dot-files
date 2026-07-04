@@ -36,5 +36,15 @@ return {
 	  },
 	  lazy = true
 	},
+	{
+	    "mason-org/mason-lspconfig.nvim",
+	    opts = {},
+	    dependencies = {
+		{ "mason-org/mason.nvim", opts = {} },
+		"neovim/nvim-lspconfig",
+	    },
+	},
+	{ "mason-org/mason.nvim", opts = {}, lazy = true },
+	{ "neovim/nvim-lspconfig", lazy = true },
 	{ "olimorris/onedarkpro.nvim", lazy = true }
-} 
+}
