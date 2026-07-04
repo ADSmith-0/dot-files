@@ -7,12 +7,11 @@ return {
 	{ "stevearc/oil.nvim", opts = {}, lazy = false, },
 	{ "nvim-mini/mini.icons" },
 	{
-	    'nvim-telescope/telescope.nvim', version = '*',
+	    "nvim-telescope/telescope.nvim", version = "^0.2.1",
 	    dependencies = {
 		-- optional but recommended
-		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	    },
-	    branch = "stable",
 	    lazy = true
 	},
 	{ "folke/todo-comments.nvim", opts = {} },
