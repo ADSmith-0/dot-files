@@ -66,5 +66,15 @@ return {
 	{ "olimorris/onedarkpro.nvim", lazy = true },
 	{ "stevearc/conform.nvim", opts = {} },
 	{ "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy", lazy = true },
-	{ 'nvim-lualine/lualine.nvim', lazy = true }
+	{ "nvim-lualine/lualine.nvim", lazy = true },
+	{
+		"folke/snacks.nvim",
+		opts = {
+			bigfile = {
+				notify = true,
+				size = 1.5 * 1024 * 1024,
+				line_length = 1000,
+			},
+		},
+	},
 }
