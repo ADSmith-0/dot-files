@@ -1,4 +1,3 @@
-- gitsigns
 - git conflict
 - mason
 - cmp/lsp
