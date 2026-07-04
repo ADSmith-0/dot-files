@@ -1,6 +1,9 @@
 require("barbar").setup({
--- highlight_visible = true,
-
+-- Disable highlighting alternate buffers
+highlight_alternate = true,
+-- Disable highlighting file icons in inactive buffers
+highlight_inactive_file_icons = true,
+highlight_visible = true,
 icons = {
 	-- Configure the base icons on the bufferline.
 	-- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
@@ -19,5 +22,14 @@ icons = {
 		changed = {enabled = true, icon = '~'},
 		deleted = {enabled = true, icon = '-'},
 	},
-}
+},
+
+alternate = {
+	gitsigns = {
+		added = {enabled = true, icon = '+'},
+		changed = {enabled = true, icon = '~'},
+		deleted = {enabled = true, icon = '-'},
+	},
+},
+
 })
