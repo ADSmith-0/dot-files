@@ -1,25 +1,11 @@
 return {
-	 {
-	  "rmagatti/auto-session",
-	  lazy = false,
-
-	  ---enables autocomplete for opts
-	  ---@module "auto-session"
-	  ---@type AutoSession.Config
-	  opts = {},
-	},
+	{ "rmagatti/auto-session", lazy = false, opts = {}, },
 	{ "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate", branch="master" },
-	{
-	  'stevearc/oil.nvim',
-	  ---@module 'oil'
-	  ---@type oil.SetupOpts
-	  opts = {},
-	  -- Optional dependencies
-	  dependencies = { { "nvim-mini/mini.icons", opts = {} } },
-	  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-	  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-	  lazy = false,
-	},
+	{ "romgrk/barbar.nvim", version = "^1.0.0", lazy=true, init = function() vim.g.barbar_auto_setup = false end, },
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{ "lewis6991/gitsigns.nvim", lazy = true },
+	{ "stevearc/oil.nvim", opts = {}, lazy = false, },
+	{ "nvim-mini/mini.icons" },
 	{
 	    'nvim-telescope/telescope.nvim', version = '*',
 	    dependencies = {

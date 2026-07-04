@@ -30,19 +30,19 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Buffer navigation
-vim.keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<Tab>", "<cmd>BufferNext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>BufferPrevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "<A-w>", "<cmd>w<CR>", { desc = "Save current buffer" })
-vim.keymap.set("n", "<A-x>", "<cmd>bd<CR>", { desc = "Close current buffer" })
+vim.keymap.set("n", "<A-x>", "<cmd>BufferClose<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "<A-l>", "<cmd>b#<CR>", { desc = "Go to last entered buffer" })
-vim.keymap.set("n", "<A->>", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer to the right" })
-vim.keymap.set("n", "<A-<>", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
+vim.keymap.set("n", "<A->>", "<cmd>BufferMoveNext<CR>", { desc = "Move buffer to the right" })
+vim.keymap.set("n", "<A-<>", "<cmd>BufferMovePrev<CR>", { desc = "Move buffer to the left" })
 -- Alt Gr keybinds
 vim.keymap.set("n", "Ł", "<cmd>w<CR>", { desc = "Save current buffer" })
-vim.keymap.set("n", "»", "<cmd>bd<CR>", { desc = "Close current buffer" })
+vim.keymap.set("n", "»", "<cmd>BufferClose<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "ł", "<cmd>b#<CR>", { desc = "Go to last entered buffer" })
-vim.keymap.set("n", "·", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer to the right" })
-vim.keymap.set("n", "─", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
+vim.keymap.set("n", "·", "<cmd>BufferMoveNext<CR>", { desc = "Move buffer to the right" })
+vim.keymap.set("n", "─", "<cmd>BufferMovePrev<CR>", { desc = "Move buffer to the left" })
 
 -- Add new line without exiting normal mode
 vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
