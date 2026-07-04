@@ -2,7 +2,6 @@
 - indent line
 - rainbow delimiters
 - bufferline
-- colorizer
 - actions preview
 - markdown preview
 
