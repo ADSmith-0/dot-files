@@ -14,3 +14,5 @@ require("mason-lspconfig").setup({
 		vim.lsp.default_setup,
 	},
 })
+
+vim.keymap.set("n", "<C-K>", vim.diagnostic.open_float, { desc = "Open float" })
