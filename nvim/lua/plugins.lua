@@ -56,7 +56,26 @@ return {
 				preset = "default",
 				["<Tab>"] = { "select_and_accept", "fallback" },
 			},
-			completion = { documentation = { auto_show = true } },
+			completion = {
+				documentation = {
+					auto_show = true,
+				},
+				list = {
+					max_items = 20,
+				},
+				selection = {
+					auto_insert = false,
+				},
+			},
+			sources = {
+				providers = {
+					path = {
+						opts = {
+							max_entries = 500,
+						},
+					},
+				},
+			},
 			snippets = { preset = "luasnip" },
 			cmdline = {
 				keymap = {
