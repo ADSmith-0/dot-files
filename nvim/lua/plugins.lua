@@ -54,7 +54,7 @@ return {
 		opts = {
 			keymap = {
 				preset = "default",
-				["<Tab>"] = { "select_and_accept" },
+				["<Tab>"] = { "select_and_accept", "fallback" },
 			},
 			completion = { documentation = { auto_show = true } },
 			snippets = { preset = "luasnip" },
