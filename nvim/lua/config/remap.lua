@@ -64,7 +64,6 @@ vim.keymap.set("n", "<leader>rr", "<cmd>restart<CR>", { desc = "Reload Neovim" }
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy<CR>", { silent = true, desc = "Open Lazy" })
 vim.keymap.set("n", "<leader>cm", "<cmd>Mason<CR>", { silent = true, desc = "Open mason" })
 
--- TODO Comments
 vim.keymap.set("n", "<leader>tc", "<cmd>TodoTelescope<CR>", { silent = true, desc = "Search TODO comments" })
 
 -- Markdown previewer
