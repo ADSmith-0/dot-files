@@ -45,8 +45,10 @@ vim.keymap.set("n", "·", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer t
 vim.keymap.set("n", "─", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
 
 -- Add new line without exiting normal mode
-vim.keymap.set("n", "<Enter>", "i<Enter><Esc>")
-vim.keymap.set("n", "<C-Enter>", "o<Esc>")
+vim.keymap.set("n", "<Enter>", "a<Enter><Esc>")
+vim.keymap.set("n", "<A-o>", "o<Esc>")
+vim.keymap.set("n", "<A-O>", "O<Esc>")
+
 
 -- Tmux sessionzier
 vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
