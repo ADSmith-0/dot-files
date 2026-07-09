@@ -62,9 +62,9 @@ return {
 				},
 				list = {
 					max_items = 20,
-				},
-				selection = {
-					auto_insert = false,
+					selection = {
+						auto_insert = false,
+					},
 				},
 			},
 			sources = {
