@@ -58,7 +58,7 @@ return {
 			},
 			completion = {
 				documentation = {
-					auto_show = true,
+					auto_show = false,
 				},
 				list = {
 					max_items = 20,
