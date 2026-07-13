@@ -14,12 +14,30 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
-	tmux new-session -d -s $selected_name -c $selected -n "Editor"
-	tmux send-keys -t $selected_name "nvim" C-m
+	if [[ "$selected" == *\/comhairle ]]; then
+		tmux new-session -d -s $selected_name -c "$selected/ui" -n "UI"
+		tmux send-keys -t $selected_name "nvim" C-m
 
-	tmux new-window -t $selected_name -c $selected -n "Runner"
-	tmux new-window -t $selected_name -c $selected -n "CLI"
-	tmux select-window -t "Editor"
+		tmux new-window -t $selected_name -c "$selected/api" -n "API"
+		tmux send-keys -t $selected_name "nvim" C-m
+
+		tmux new-window -t $selected_name -c $selected -n "Runner"
+		tmux send-keys -t $selected_name "cd ui/packages && pn comhairle" C-m
+		tmux split-window -h -c $selected -t $selected_name
+		tmux send-keys -t $selected_name "nix develop -c just api-dev" C-m
+		tmux split-window -v -c $selected -t $selected_name
+		tmux send-keys -t $selected_name "nix develop -c just pg" C-m
+
+		tmux new-window -t $selected_name -c $selected -n "CLI"
+		tmux select-window -t "$selected_name:UI"
+	else
+		tmux new-session -d -s $selected_name -c $selected -n "Editor"
+		tmux send-keys -t $selected_name "nvim" C-m
+
+		tmux new-window -t $selected_name -c $selected -n "Runner"
+		tmux new-window -t $selected_name -c $selected -n "CLI"
+		tmux select-window -t "$selected_name:Editor"
+	fi
 fi
 
 if [[ ! -z $TMUX ]]; then
