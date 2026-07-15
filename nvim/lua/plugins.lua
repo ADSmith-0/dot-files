@@ -1,11 +1,11 @@
 return {
 	{ "xiyaowong/transparent.nvim" },
-	{ "rmagatti/auto-session", lazy = false, opts = {} },
-	{ "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate", branch = "master" },
-	{ "akinsho/bufferline.nvim", version = "*", lazy = true },
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{ "lewis6991/gitsigns.nvim", lazy = true },
-	{ "stevearc/oil.nvim", opts = {}, lazy = false },
+	{ "rmagatti/auto-session",           lazy = false,  opts = {} },
+	{ "nvim-treesitter/nvim-treesitter", lazy = false,  build = ":TSUpdate", branch = "master" },
+	{ "akinsho/bufferline.nvim",         version = "*", lazy = true },
+	{ "nvim-tree/nvim-web-devicons",     lazy = true },
+	{ "lewis6991/gitsigns.nvim",         lazy = true },
+	{ "stevearc/oil.nvim",               opts = {},     lazy = false },
 	{ "nvim-mini/mini.icons" },
 	{
 		"nvim-telescope/telescope.nvim",
@@ -17,7 +17,7 @@ return {
 		lazy = true,
 	},
 	{ "folke/todo-comments.nvim", opts = {} },
-	{ "nvim-lua/plenary.nvim", lazy = true },
+	{ "nvim-lua/plenary.nvim",    lazy = true },
 	{
 		"christoomey/vim-tmux-navigator",
 		cmd = {
@@ -29,10 +29,10 @@ return {
 			"TmuxNavigatorProcessList",
 		},
 		keys = {
-			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 		lazy = true,
@@ -45,8 +45,11 @@ return {
 			"neovim/nvim-lspconfig",
 		},
 	},
-	{ "mason-org/mason.nvim", opts = {}, lazy = true },
-	{ "neovim/nvim-lspconfig", lazy = true },
+	{ "mason-org/mason.nvim",      opts = {},          lazy = true },
+	{
+		'neovim/nvim-lspconfig',
+		dependencies = { 'saghen/blink.cmp' },
+	},
 	{
 		"saghen/blink.cmp",
 		-- dependencies = { "rafamadriz/friendly-snippets" },
@@ -57,26 +60,50 @@ return {
 				["<Tab>"] = { "select_and_accept", "fallback" },
 			},
 			completion = {
+				menu = {
+					auto_show = true,
+					auto_show_delay_ms = 300,
+				},
 				documentation = {
 					auto_show = false,
 				},
 				list = {
-					max_items = 20,
+					max_items = 10,
 					selection = {
 						auto_insert = false,
 					},
 				},
 			},
+			snippets = { preset = "luasnip" },
 			sources = {
+				default = { "lsp", "path", "snippets", "buffer" },
 				providers = {
+					lsp = {
+						name = "LSP",
+						fallbacks = { "buffer" },
+						should_show_items = true,
+						max_items = 30,
+						min_keyword_length = 0,
+					},
+					buffer = {
+						name = "Buffer",
+						score_offset = -10,
+						max_items = 10,
+						should_show_items = true,
+					},
 					path = {
-						opts = {
-							max_entries = 500,
-						},
+						name = "Path",
+						should_show_items = true,
+						max_items = 20,
 					},
 				},
 			},
-			snippets = { preset = "luasnip" },
+			signature = {
+				enabled = true,
+			},
+			fuzzy = {
+				implementation = "rust",
+			},
 			cmdline = {
 				keymap = {
 					preset = "default",
@@ -105,8 +132,8 @@ return {
 		build = "make install_jsregexp",
 	},
 	{ "olimorris/onedarkpro.nvim", lazy = true },
-	{ "stevearc/conform.nvim", opts = {} },
-	{ "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy", lazy = true },
+	{ "stevearc/conform.nvim",     opts = {} },
+	{ "kylechui/nvim-surround",    version = "^4.0.0", event = "VeryLazy", lazy = true },
 	{ "nvim-lualine/lualine.nvim", lazy = true },
 	{
 		"folke/snacks.nvim",
@@ -134,7 +161,7 @@ return {
 		-- use opts = {} for passing setup options
 		-- this is equivalent to setup({}) function
 	},
-	{ "norcalli/nvim-colorizer.lua", lazy = true },
+	{ "norcalli/nvim-colorizer.lua",     lazy = true },
 	{
 		"aznhe21/actions-preview.nvim",
 		commit = "2b604b2e8e662c03b716436f6ffebcb19663e66a",
@@ -151,8 +178,8 @@ return {
 	},
 	{ "hiphish/rainbow-delimiters.nvim", lazy = true },
 	-- { "mbbill/undotree", lazy = true },
-	{ "akinsho/git-conflict.nvim", version = "*", config = true },
-	{ "nvim-mini/mini.indentscope", version = "*", lazy = true },
+	{ "akinsho/git-conflict.nvim",       version = "*", config = true },
+	{ "nvim-mini/mini.indentscope",      version = "*", lazy = true },
 	{
 		"folke/trouble.nvim",
 		lazy = true,
