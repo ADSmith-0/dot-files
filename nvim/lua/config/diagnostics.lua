@@ -1,4 +1,5 @@
 vim.diagnostic.config({
+	update_in_insert = false,
 	virtual_text = true,
 	severity_sort = true,
 	signs = {
