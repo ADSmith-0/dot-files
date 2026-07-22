@@ -1,9 +1,20 @@
 #!/usr/bin/env bash
 
 if [[ $# -eq 1 ]]; then
-    selected=$1
+	selected=$1
 else
-    selected=$({ fdfind . ~/Dev --full-path -E testing -d 1 -t d ; fdfind . ~/Dev/testing --full-path -d 1 -t d ; echo ~/dot-files ; } | fzf)
+	selected=$({
+		for dir in $(fdfind . ~/Dev -E testing -E learning -d 1 -t d); do
+			printf "%s\t%s\n" "$(basename "$dir")" "$dir"
+		done
+		for dir in $(fdfind . ~/Dev/testing -d 1 -t d); do
+			printf "%s\t%s\n" "testing/$(basename "$dir")" "$dir"
+		done
+		for dir in $(fdfind . ~/Dev/learning --full-path -d 1 -t d); do
+			printf "%s\t%s\n" "learning/$(basename "$dir")" "$dir"
+		done
+		printf "%s\t%s\n" "dot-files" "$HOME/dot-files"
+	} | fzf --tac --delimiter $'\t' --with-nth 1 | cut -f2)
 fi
 
 if [[ -z $selected ]]; then
