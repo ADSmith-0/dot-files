@@ -58,6 +58,8 @@ return {
 			keymap = {
 				preset = "default",
 				["<Tab>"] = { "select_and_accept", "fallback" },
+				["<C-e>"] = { "show", "fallback" },
+				["<C-x>"] = { "hide" },
 			},
 			completion = {
 				menu = {
