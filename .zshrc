@@ -147,8 +147,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--style=minimal
   --color=bg:#16181A,fg:#989fac,
   --color=bg+:#282c34,fg+:#abb2bf,hl+:#c44ecd
-  --color=hl:#69bf50
-  --color=info:#69bf50,prompt:#519fde,pointer:#c44ecd
+  --color=hl:#519fde
+  --color=info:#69bf50,prompt:#519fde,pointer:#dd4960
   --color=marker:#dd4960,spinner:#519fde,header:#519fde,border:#5c6370,gutter:#4b5263'
 
 # zsh keybinds
