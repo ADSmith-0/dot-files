@@ -35,7 +35,7 @@ if ! tmux has-session -t=$selected_name 2> /dev/null; then
 		tmux new-window -t $selected_name -c $selected -n "Runner"
 		tmux send-keys -t $selected_name "cd ui/packages && pn comhairle" C-m
 		tmux split-window -h -c $selected -t $selected_name
-		tmux send-keys -t $selected_name "nix develop -c just api-dev" C-m
+		tmux send-keys -t $selected_name "nix develop -c just start-redis && just api-dev" C-m
 		tmux split-window -v -c $selected -t $selected_name
 		tmux send-keys -t $selected_name "nix develop -c just pg" C-m
 
