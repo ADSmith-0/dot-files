@@ -144,8 +144,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777777"
 
 export FZF_DEFAULT_COMMAND="fdfind --type file --follow --hidden --exclude .git --color=always"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS='--style=minimal
-  --color=bg:#16181A,fg:#989fac,
+export FZF_DEFAULT_OPTS='--ansi
+  --style=minimal
+  --color=bg:#16181A,fg:#989fac
   --color=bg+:#282c34,fg+:#abb2bf,hl+:#c44ecd
   --color=hl:#519fde
   --color=info:#69bf50,prompt:#519fde,pointer:#dd4960
