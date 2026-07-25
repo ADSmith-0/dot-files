@@ -1,5 +1,7 @@
 require("nvim-treesitter.configs").setup({
-	ensure_installed = { "c", "lua", "rust", "javascript", "css", "html", "svelte" },
+	build = ":TSUpdate",
+	main = "nvim-treesitter.configs",
+	ensure_installed = { "c", "lua", "rust", "javascript", "css", "html", "svelte", "markdown", "markdown_inline" },
 	auto_install = true,
 	highlight = { enable = true },
 })

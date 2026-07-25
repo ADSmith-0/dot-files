@@ -17,5 +17,8 @@ require("config.indent-blankline")
 require("config.rainbow-delimiters")
 require("config.git-conflict")
 require("config.mini-indentscope")
+require("config.render-markdown")
+require("config.markdown-plus")
+
 require("config.autocmd")
 require("config.highlight-groups")

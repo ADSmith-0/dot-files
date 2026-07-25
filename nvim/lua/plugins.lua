@@ -3,7 +3,7 @@ return {
 	{ "rmagatti/auto-session", lazy = false, opts = {} },
 	{ "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate", branch = "master" },
 	{ "akinsho/bufferline.nvim", version = "*", lazy = true },
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{ "nvim-tree/nvim-web-devicons", lazy = false },
 	{ "lewis6991/gitsigns.nvim", lazy = true },
 	{ "stevearc/oil.nvim", opts = {}, lazy = false },
 	{ "nvim-mini/mini.icons" },
@@ -53,6 +53,11 @@ return {
 	{
 		"yousefhadder/markdown-plus.nvim",
 		ft = "markdown",
+		opts = {},
+	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
 		opts = {},
 	},
 	{
@@ -111,7 +116,7 @@ return {
 			cmdline = {
 				keymap = {
 					preset = "default",
-					["<Tab>"] = { "select_accept_and_enter", "show" },
+					["<Tab>"] = { "select_and_accept", "show" },
 					["<S-Tab>"] = { "select_accept_and_enter", "show" },
 					["<C-n>"] = { "select_next", "show", "fallback" },
 				},
