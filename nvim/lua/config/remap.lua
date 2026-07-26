@@ -49,6 +49,8 @@ vim.keymap.set("n", "<Enter>", "a<Enter><Esc>")
 vim.keymap.set("n", "<A-o>", "o<Esc>")
 vim.keymap.set("n", "<A-O>", "O<Esc>")
 
+-- Save
+vim.keymap.set("n", "<C-s>", "<cmd>:w<CR>", { desc = "Save buffer", silent = true })
 
 -- Tmux sessionzier
 vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
