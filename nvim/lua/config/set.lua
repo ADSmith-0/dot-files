@@ -33,7 +33,7 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = false
 
-vim.opt.scrolloff = 4
+vim.opt.scrolloff = 17
 
 -- if vim.opt.diff:get() then
 --  vim.o.diffopt = 'internal,filler,closeoff'
