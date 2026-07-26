@@ -49,6 +49,9 @@ vim.keymap.set("n", "<Enter>", "a<Enter><Esc>", { desc = "Enter new line" })
 vim.keymap.set("n", "<A-o>", "o<Esc>", { desc = "Create new line below" })
 vim.keymap.set("n", "<A-O>", "O<Esc>", { desc = "Create new line above" })
 
+vim.keymap.set("i", "<C-b>", "<C-o>o", { desc = "Create new line below in insert mode"})
+vim.keymap.set("i", "<C-a>", "<C-o>O", { desc = "Create new line above in insert mode"})
+
 -- Save
 vim.keymap.set("n", "<C-s>", "<cmd>:w<CR>", { desc = "Save buffer", silent = true })
 
