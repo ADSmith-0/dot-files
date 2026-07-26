@@ -45,9 +45,9 @@ vim.keymap.set("n", "·", "<cmd>BufferLineMoveNext<CR>", { desc = "Move buffer t
 vim.keymap.set("n", "─", "<cmd>BufferLineMovePrev<CR>", { desc = "Move buffer to the left" })
 
 -- Add new line without exiting normal mode
-vim.keymap.set("n", "<Enter>", "a<Enter><Esc>")
-vim.keymap.set("n", "<A-o>", "o<Esc>")
-vim.keymap.set("n", "<A-O>", "O<Esc>")
+vim.keymap.set("n", "<Enter>", "a<Enter><Esc>", { desc = "Enter new line" })
+vim.keymap.set("n", "<A-o>", "o<Esc>", { desc = "Create new line below" })
+vim.keymap.set("n", "<A-O>", "O<Esc>", { desc = "Create new line above" })
 
 -- Save
 vim.keymap.set("n", "<C-s>", "<cmd>:w<CR>", { desc = "Save buffer", silent = true })
