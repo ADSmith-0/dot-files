@@ -33,7 +33,7 @@ ls.add_snippets("all", {
 -- For Svelte +page.server.ts
 ls.add_snippets("typescript", {
 	s(
-		"ssl",
+		"!load",
 		fmt(
 			"export {}function load({}) {{\n\t{}\n}}",
 			{ c(1, { t("async "), t("") }), c(2, { t(""), fmt("{{ {} }}: LoadEvent", i(1)) }), i(0) }
@@ -42,11 +42,11 @@ ls.add_snippets("typescript", {
 })
 
 ls.add_snippets("svelte", {
-	s("sct", fmt('<script lang="ts">\n\t{}\n</script>', { i(0) })),
-	s("prp", fmt("interface Props {{\n\t{}\n}}\n\nlet {{ {} }}: Props = $props();", { i(1), i(0) })),
-	s("ste", fmt("let {} = $state<{}>({});", { i(1), i(2), i(0) })),
-	s("drv", fmt("let {} = $derived({});", { i(1), i(0) })),
-	s("dvb", fmt("let {} = $derived.by(() => {{\n\t{}\n\treturn;\n}});", { i(1), i(0) })),
+	s("!script", fmt('<script lang="ts">\n\t{}\n</script>', { i(0) })),
+	s("!props", fmt("interface Props {{\n\t{}\n}}\n\nlet {{ {} }}: Props = $props();", { i(1), i(0) })),
+	s("!state", fmt("let {} = $state<{}>({});", { i(1), i(2), i(0) })),
+	s("!derived", fmt("let {} = $derived({});", { i(1), i(0) })),
+	s("!derivedBy", fmt("let {} = $derived.by(() => {{\n\t{}\n\treturn;\n}});", { i(1), i(0) })),
 })
 
 ls.add_snippets("typescriptreact", {
@@ -87,7 +87,7 @@ ls.add_snippets("markdown", {
 	s("ili", fmt('<a name="{}">{}</a>', { i(1), i(0) })),
 	s("eli", fmt("[{}]({})", { i(1), i(0) })),
 	s(
-		"atomic",
+		"!atomic",
 		fmt(
 			"# {}\n{}\n#atomic\n\n{}\n\n## References",
 			{
