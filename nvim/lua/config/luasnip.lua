@@ -28,6 +28,13 @@ ls.add_snippets("all", {
 	s("cld", fmt('console.log("{}:", {});', { rep(1), i(1) })),
 	s("cdr", fmt("console.dir({});", { i(0) })),
 	s("cer", fmt("console.err({});", { i(0) })),
+	s("/**",
+		fmt(
+			"/**\n* {}\n*\n* @param {} - {}\n* @returns {}\n*\n* @example\n* ```\n* {}\n* ```\n*/",
+			{ i(1), i(2), i(3), i(4), i(0) }
+		)
+	),
+	s("/*", fmt("/**\n* {}\n*/", { i(0) })),
 })
 
 -- For Svelte +page.server.ts
@@ -88,16 +95,13 @@ ls.add_snippets("markdown", {
 	s("eli", fmt("[{}]({})", { i(1), i(0) })),
 	s(
 		"!atomic",
-		fmt(
-			"# {}\n{}\n#atomic\n\n{}\n\n## References",
-			{
-				f(function(_, snip)
-					local name = snip.env.TM_FILENAME or ""
-					return name:gsub("%.md", "")
-				end),
-				p(os.date, "%Y-%m-%d, %H:%M:%S"),
-				i(0),
-			}
-		)
+		fmt("# {}\n{}\n#atomic\n\n{}\n\n## References", {
+			f(function(_, snip)
+				local name = snip.env.TM_FILENAME or ""
+				return name:gsub("%.md", "")
+			end),
+			p(os.date, "%Y-%m-%d, %H:%M:%S"),
+			i(0),
+		})
 	),
 })
