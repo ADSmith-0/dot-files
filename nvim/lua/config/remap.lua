@@ -89,6 +89,10 @@ vim.keymap.set(
 -- vim.keymap.set("n", "gl", "<cmd>diffget 3<CR>", { silent = true, desc = "Pick right file in mergetool" })
 -- vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick middle file in mergetool" })
 
+-- JS/TS console log
+vim.keymap.set("v", "<leader>cl", "yoconsole.log(<Esc>pa);<Esc>", { silent = true, desc = "Print console log for highlighted variable" })
+vim.keymap.set("v", "<leader>cd", "yoconsole.log(\"<Esc>pa:\", <Esc>pa);<Esc>", { silent = true, desc = "Print console log for highlighted variable" })
+
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { silent = true, desc = "open undotree" })
 
