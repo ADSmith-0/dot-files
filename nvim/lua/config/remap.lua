@@ -57,7 +57,7 @@ vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { de
 vim.keymap.set(
 	"n",
 	"<leader>ls",
-	"<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>",
+	"<cmd>source ~/.config/nvim/lua/config/luasnip.lua<CR>",
 	{ desc = "Reload snippets" }
 )
 vim.keymap.set("n", "<leader>rr", "<cmd>restart<CR>", { desc = "Reload Neovim" })

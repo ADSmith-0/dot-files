@@ -19,6 +19,7 @@ require("config.git-conflict")
 require("config.mini-indentscope")
 require("config.render-markdown")
 require("config.markdown-plus")
+require("config.luasnip")
 
 require("config.autocmd")
 require("config.highlight-groups")
