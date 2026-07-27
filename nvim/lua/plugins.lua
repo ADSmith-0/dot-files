@@ -51,13 +51,23 @@ return {
 		dependencies = { "saghen/blink.cmp" },
 	},
 	{
-		"yousefhadder/markdown-plus.nvim",
+		"epwalsh/obsidian.nvim",
+		version = "*", -- recommended, use latest release instead of latest commit
+		lazy = true,
 		ft = "markdown",
-		opts = {},
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			workspaces = {
+				{
+					name = "main",
+					path = "~/Documents/notes",
+				},
+			},
+		},
 	},
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
 		opts = {},
 	},
 	{
