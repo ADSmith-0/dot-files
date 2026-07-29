@@ -19,6 +19,7 @@ require("telescope").setup({
 			"node_modules",
 			"android",
 			"ios",
+			"target",
 		},
 	},
 })
