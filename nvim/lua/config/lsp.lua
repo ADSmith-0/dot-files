@@ -28,7 +28,6 @@ vim.lsp.config("rust-analyzer", {
 		},
 	}
 })
-vim.lsp.enable("rust-analyzer")
 
 require("mason-lspconfig").setup({
 	ensure_installed = { "ts_ls", "emmet_language_server" },
