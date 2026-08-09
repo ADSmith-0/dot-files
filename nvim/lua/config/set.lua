@@ -18,6 +18,7 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
 
 vim.opt.wrap = true
+vim.o.linebreak = true
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
