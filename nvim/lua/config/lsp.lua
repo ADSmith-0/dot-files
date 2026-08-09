@@ -13,20 +13,20 @@ vim.lsp.config("rust-analyzer", {
 		["rust-analyzer"] = {
 			procMacro = { enable = true },
 			checkOnSave = {
-				command = "clippy",       -- clippy is faster than cargo check for many cases
+				command = "clippy", -- clippy is faster than cargo check for many cases
 				extraArgs = { "--no-deps" }, -- don't re-check dependencies
 			},
 			diagnostics = {
 				-- disabled = { "unresolved-import" }, -- noisy + expensive for workspaces
 				enable = true,
-				workspace = false
+				workspace = false,
 			},
 			cargo = {
 				targetDir = true, -- reuse the target dir, avoids duplicate compilation
-				buildScripts = { enable = true }
+				buildScripts = { enable = true },
 			},
 		},
-	}
+	},
 })
 
 require("mason-lspconfig").setup({

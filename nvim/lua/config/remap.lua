@@ -49,8 +49,8 @@ vim.keymap.set("n", "<Enter>", "a<Enter><Esc>", { desc = "Enter new line" })
 vim.keymap.set("n", "<A-o>", "o<Esc>", { desc = "Create new line below" })
 vim.keymap.set("n", "<A-O>", "O<Esc>", { desc = "Create new line above" })
 
-vim.keymap.set("i", "<C-b>", "<C-o>o", { desc = "Create new line below in insert mode"})
-vim.keymap.set("i", "<C-a>", "<C-o>O", { desc = "Create new line above in insert mode"})
+vim.keymap.set("i", "<C-b>", "<C-o>o", { desc = "Create new line below in insert mode" })
+vim.keymap.set("i", "<C-a>", "<C-o>O", { desc = "Create new line above in insert mode" })
 
 -- Save
 vim.keymap.set("n", "<C-s>", "<cmd>:w<CR>", { desc = "Save buffer", silent = true })
@@ -59,12 +59,7 @@ vim.keymap.set("n", "<C-s>", "<cmd>:w<CR>", { desc = "Save buffer", silent = tru
 vim.keymap.set("n", "<A-p>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", { desc = "Change tmux project" })
 
 -- Refresh
-vim.keymap.set(
-	"n",
-	"<leader>ls",
-	"<cmd>source ~/.config/nvim/lua/config/luasnip.lua<CR>",
-	{ desc = "Reload snippets" }
-)
+vim.keymap.set("n", "<leader>ls", "<cmd>source ~/.config/nvim/lua/config/luasnip.lua<CR>", { desc = "Reload snippets" })
 vim.keymap.set("n", "<leader>rr", "<cmd>restart<CR>", { desc = "Reload Neovim" })
 
 -- Open config menus
@@ -93,8 +88,18 @@ vim.keymap.set(
 -- vim.keymap.set("n", "g0", "<cmd>diffget 2<CR>", { silent = true, desc = "Pick middle file in mergetool" })
 
 -- JS/TS console log
-vim.keymap.set("v", "<leader>cl", "yoconsole.log(<Esc>pa);<Esc>", { silent = true, desc = "Print console log for highlighted variable" })
-vim.keymap.set("v", "<leader>cd", "yoconsole.log(\"<Esc>pa:\", <Esc>pa);<Esc>", { silent = true, desc = "Print console log for highlighted variable" })
+vim.keymap.set(
+	"v",
+	"<leader>cl",
+	"yoconsole.log(<Esc>pa);<Esc>",
+	{ silent = true, desc = "Print console log for highlighted variable" }
+)
+vim.keymap.set(
+	"v",
+	"<leader>cd",
+	'yoconsole.log("<Esc>pa:", <Esc>pa);<Esc>',
+	{ silent = true, desc = "Print console log for highlighted variable" }
+)
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { silent = true, desc = "open undotree" })
