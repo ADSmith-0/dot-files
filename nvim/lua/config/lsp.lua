@@ -10,19 +10,25 @@ vim.lsp.config("lua_ls", {
 
 vim.lsp.config("rust-analyzer", {
 	settings = {
-		procMacro = { enable = true },
-		checkOnSave = {
-			command = "clippy",       -- clippy is faster than cargo check for many cases
-			extraArgs = { "--no-deps" }, -- don't re-check dependencies
-		},
-		-- diagnostics = {
-		-- 	disabled = { "unresolved-import" }, -- noisy + expensive for workspaces
-		-- },
-		cargo = {
-			targetDir = true, -- reuse the target dir, avoids duplicate compilation
+		["rust-analyzer"] = {
+			procMacro = { enable = true },
+			checkOnSave = {
+				command = "clippy",       -- clippy is faster than cargo check for many cases
+				extraArgs = { "--no-deps" }, -- don't re-check dependencies
+			},
+			diagnostics = {
+				-- disabled = { "unresolved-import" }, -- noisy + expensive for workspaces
+				enable = true,
+				workspace = false
+			},
+			cargo = {
+				targetDir = true, -- reuse the target dir, avoids duplicate compilation
+				buildScripts = { enable = true }
+			},
 		},
 	}
 })
+vim.lsp.enable("rust-analyzer")
 
 require("mason-lspconfig").setup({
 	ensure_installed = { "ts_ls", "emmet_language_server" },

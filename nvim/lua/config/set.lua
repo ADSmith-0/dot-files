@@ -8,7 +8,7 @@ vim.o.winborder = "rounded"
 -- auto-session
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.spelllang = "en_gb"
 
 vim.opt.nu = true
