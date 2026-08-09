@@ -144,7 +144,15 @@ return {
 	},
 	{ "olimorris/onedarkpro.nvim", lazy = true },
 	{ "stevearc/conform.nvim", opts = {} },
-	{ "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy", lazy = true },
+	{
+		"kylechui/nvim-surround",
+		version = "^4.0.0",
+		event = "VeryLazy",
+		lazy = true,
+		opts = {
+			move_cursor = "sticky",
+		},
+	},
 	{ "nvim-lualine/lualine.nvim", lazy = true },
 	{
 		"folke/snacks.nvim",

@@ -82,6 +82,29 @@ vim.keymap.set(
 	{ silent = true, desc = "Close preview Markdown file" }
 )
 
+-- Remaps to remove S key from the the surround visual keymaps
+vim.keymap.set("x", '"', '<Plug>(nvim-surround-visual)"', { silent = true, desc = "Surround with quotes" })
+vim.keymap.set("x", "'", "<Plug>(nvim-surround-visual)'", { silent = true, desc = "Surround with apostrophes" })
+vim.keymap.set("x", "`", "<Plug>(nvim-surround-visual)`", { silent = true, desc = "Surround with backticks" })
+vim.keymap.set("x", "{", "<Plug>(nvim-surround-visual){", { silent = true, desc = "Surround with left brace" })
+vim.keymap.set("x", "[", "<Plug>(nvim-surround-visual)[", { silent = true, desc = "Surround with left square bracket" })
+vim.keymap.set("x", "(", "<Plug>(nvim-surround-visual)(", { silent = true, desc = "Surround with left bracket" })
+vim.keymap.set("x", "<", "<Plug>(nvim-surround-visual)<", { silent = true, desc = "Surround with left angled bracket" })
+vim.keymap.set("x", "}", "<Plug>(nvim-surround-visual)}", { silent = true, desc = "Surround with right brace" })
+vim.keymap.set(
+	"x",
+	"]",
+	"<Plug>(nvim-surround-visual)]",
+	{ silent = true, desc = "Surround with right square bracket" }
+)
+vim.keymap.set("x", ")", "<Plug>(nvim-surround-visual))", { silent = true, desc = "Surround with right bracket" })
+vim.keymap.set(
+	"x",
+	">",
+	"<Plug>(nvim-surround-visual)>",
+	{ silent = true, desc = "Surround with right angled bracket" }
+)
+
 -- Mergetool
 -- vim.keymap.set("n", "gh", "<cmd>diffget 1<CR>", { silent = true, desc = "Pick left file in mergetool" })
 -- vim.keymap.set("n", "gl", "<cmd>diffget 3<CR>", { silent = true, desc = "Pick right file in mergetool" })
