@@ -87,15 +87,8 @@ vim.keymap.set("x", '"', '<Plug>(nvim-surround-visual)"', { silent = true, desc 
 vim.keymap.set("x", "'", "<Plug>(nvim-surround-visual)'", { silent = true, desc = "Surround with apostrophes" })
 vim.keymap.set("x", "`", "<Plug>(nvim-surround-visual)`", { silent = true, desc = "Surround with backticks" })
 vim.keymap.set("x", "{", "<Plug>(nvim-surround-visual){", { silent = true, desc = "Surround with left brace" })
-vim.keymap.set("x", "[", "<Plug>(nvim-surround-visual)[", { silent = true, desc = "Surround with left square bracket" })
 vim.keymap.set("x", "(", "<Plug>(nvim-surround-visual)(", { silent = true, desc = "Surround with left bracket" })
 vim.keymap.set("x", "}", "<Plug>(nvim-surround-visual)}", { silent = true, desc = "Surround with right brace" })
-vim.keymap.set(
-	"x",
-	"]",
-	"<Plug>(nvim-surround-visual)]",
-	{ silent = true, desc = "Surround with right square bracket" }
-)
 vim.keymap.set("x", ")", "<Plug>(nvim-surround-visual))", { silent = true, desc = "Surround with right bracket" })
 
 -- Mergetool
