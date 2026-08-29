@@ -89,7 +89,7 @@ size = 10.5
 
 [window]
 padding = { x = 8, y = 2 }
-opacity = 0.9
+opacity = 0.95
 decorations = "None"
 
 [env]
