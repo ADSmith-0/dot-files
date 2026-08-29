@@ -36,6 +36,9 @@ require("mason-lspconfig").setup({
 	},
 })
 
+-- Disabled writing to log file
+vim.lsp.log.set_level("off")
+
 vim.keymap.set("n", "<leader>rs", vim.lsp.buf.rename, { silent = true, desc = "Rename symbol" })
 vim.keymap.set("n", "<C-K>", vim.diagnostic.open_float, { desc = "Open float" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Jump to definition" })

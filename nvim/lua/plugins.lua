@@ -73,22 +73,6 @@ return {
 				["<C-e>"] = { "show", "fallback" },
 				["<C-x>"] = { "hide" },
 			},
-			completion = {
-				menu = {
-					auto_show = true,
-					auto_show_delay_ms = 300,
-				},
-				documentation = {
-					auto_show = false,
-				},
-				list = {
-					max_items = 10,
-					selection = {
-						auto_insert = false,
-					},
-				},
-			},
-			snippets = { preset = "luasnip" },
 			sources = {
 				default = { "lsp", "path", "snippets", "buffer" },
 				providers = {
@@ -112,6 +96,21 @@ return {
 					},
 				},
 			},
+			completion = {
+				menu = {
+					auto_show = true,
+				},
+				documentation = {
+					auto_show = false,
+				},
+				list = {
+					max_items = 10,
+					selection = {
+						auto_insert = false,
+					},
+				},
+			},
+			snippets = { preset = "luasnip" },
 			fuzzy = {
 				implementation = "rust",
 			},
