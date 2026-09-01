@@ -2,7 +2,7 @@ require("telescope").setup({
 	defaults = {
 		color_devicons = true,
 		sorting_strategy = "ascending",
-		path_display = { "smart" },
+		path_display = { truncate = 10, shorten = 8 },
 		layout_strategy = "horizontal",
 		prompt_prefix = " 🔍 ",
 		selection_caret = "▋ ",
@@ -16,6 +16,7 @@ require("telescope").setup({
 		},
 		file_ignore_patterns = {
 			".git",
+			".svelte-kit",
 			"node_modules",
 			"android",
 			"ios",
@@ -29,9 +30,6 @@ require("telescope").load_extension("fzf")
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>f", function()
 	builtin.fd({
-		hidden = true,
-		no_ignore = true,
-		no_ignore_parent = true,
 		previewer = false,
 		layout_config = { height = 0.75, width = 0.65 },
 	})
@@ -41,9 +39,6 @@ vim.keymap.set("n", "<leader>*", builtin.grep_string, { desc = "Find word under 
 vim.keymap.set("v", "<leader>*", builtin.grep_string, { desc = "Find selection in files" })
 vim.keymap.set("n", "<leader><leader>", function()
 	builtin.buffers({
-		hidden = true,
-		no_ignore = true,
-		no_ignore_parent = true,
 		previewer = false,
 		layout_config = { height = 0.75, width = 0.65 },
 	})
