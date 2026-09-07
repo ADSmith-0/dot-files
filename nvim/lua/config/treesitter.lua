@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.config").setup({
 	build = ":TSUpdate",
 	main = "nvim-treesitter.configs",
 	ensure_installed = { "c", "lua", "rust", "javascript", "css", "html", "svelte", "markdown", "markdown_inline" },
