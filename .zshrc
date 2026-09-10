@@ -181,7 +181,6 @@ alias "gn"="git-open-pr.sh"
 alias "gl"="git log --oneline"
 alias "gg"="git log --oneline --graph"
 alias "gf"="git log -p"
-alias "pn"="pnpm"
 # aliases end
 
 # pnpm
