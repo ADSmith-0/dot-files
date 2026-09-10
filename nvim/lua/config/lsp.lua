@@ -30,7 +30,7 @@ vim.lsp.config("rust-analyzer", {
 })
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "ts_ls", "emmet_language_server" },
+	ensure_installed = { "ts_ls", "emmet_language_server", "rust_analyzer", "svelte", "html", "cssls" },
 	handlers = {
 		vim.lsp.default_setup,
 	},
