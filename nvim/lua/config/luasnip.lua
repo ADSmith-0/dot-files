@@ -51,6 +51,7 @@ ls.add_snippets("typescript", {
 ls.add_snippets("svelte", {
 	s("!script", fmt('<script lang="ts">\n\t{}\n</script>', { i(0) })),
 	s("!props", fmt("interface Props {{\n\t{}\n}}\n\nlet {{ {} }}: Props = $props();", { i(1), i(0) })),
+	s("!layout", { t({ '<script lang="ts">','\tconst { children } = $props();', "</script>", "", '{@render children()}' }) }),
 	s("!state", fmt("let {} = $state<{}>({});", { i(1), i(2), i(0) })),
 	s("!derived", fmt("let {} = $derived({});", { i(1), i(0) })),
 	s("!derivedBy", fmt("let {} = $derived.by(() => {{\n\t{}\n\treturn;\n}});", { i(1), i(0) })),
