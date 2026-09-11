@@ -28,7 +28,7 @@ tmux_running=$(pgrep tmux)
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
 	if [[ "$selected" == *\/comhairle ]]; then
 		tmux new-session -d -s $selected_name -c "$selected/ui" -n "UI"
-		sleep 0.2
+		sleep 0.4
 		tmux send-keys -t $selected_name "nvim" C-m
 
 		tmux new-window -t $selected_name -c "$selected/api" -n "API"
@@ -45,7 +45,7 @@ if ! tmux has-session -t=$selected_name 2> /dev/null; then
 		tmux select-window -t "$selected_name:UI"
 	else
 		tmux new-session -d -s $selected_name -c $selected -n "Editor"
-		sleep 0.2
+		sleep 0.4
 		tmux send-keys -t $selected_name "nvim" C-m
 
 		tmux new-window -t $selected_name -c $selected -n "Runner"
